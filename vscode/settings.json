@@ -3,7 +3,7 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "editor.tabSize": 2,
-    "workbench.iconTheme": "Monokai Pro (Filter Machine) Icons",
+    "workbench.iconTheme": "file-icons",
     "window.title": "${dirty}${activeEditorShort}${separator}${activeFolderMedium} [${rootName}]",
     "files.watcherExclude": {
         "**/_build/**": true,
@@ -16,10 +16,22 @@
     "[markdown]": {},
     "elixirLS.mixEnv": "dev",
     "[elixir]": {
-        "editor.defaultFormatter": "JakeBecker.elixir-ls"
+        "editor.defaultFormatter": "JakeBecker.elixir-ls",
+        "editor.rulers": [
+            98
+        ]
     },
     "markdown.extension.toc.githubCompatibility": true,
-    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.profiles.osx": {
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        },
+        "zsh (login)": {
+            "path": "zsh"
+        }
+    },
+    "terminal.integrated.defaultProfile.osx": "zsh (login)",
     "editor.largeFileOptimizations": false,
     "files.associations": {
         "Jenkinsfile_build": "jenkinsfile",
@@ -35,6 +47,9 @@
     "emmet.includeLanguages": {
         "html-eex": "html"
     },
-    "liveshare.authenticationProvider": "GitHub",
-    "window.zoomLevel": 1
+    "diffEditor.ignoreTrimWhitespace": false,
+    "gitlens.codeLens.scopes": [
+        "document",
+        "containers"
+    ],
 }

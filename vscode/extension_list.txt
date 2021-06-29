@@ -6,15 +6,16 @@ bradlc.vscode-tailwindcss
 DotJoshJohnson.xml
 eamodio.gitlens
 file-icons.file-icons
+florinpatrascu.vscode-elixir-snippets
 haaaad.ansible
 ivory-lab.jenkinsfile-support
 JakeBecker.elixir-ls
 jock.svg
 liviuschera.noctis
 mechatroner.rainbow-csv
-monokai.theme-monokai-pro-vscode
 mrorz.language-gettext
 ms-azuretools.vscode-docker
+ms-vscode-remote.remote-containers
 ms-vsliveshare.vsliveshare
 msaraiva.surface
 octref.vetur
