@@ -7,11 +7,13 @@
     "window.title": "${dirty}${activeEditorShort}${separator}${activeFolderMedium} [${rootName}]",
     "files.watcherExclude": {
         "**/_build/**": true,
-        "**/.elixir_ls/**": true
+        "**/.elixir_ls/**": true,
+        "**/.yarn/**": true
     },
     "files.exclude": {
         "**/_build": true,
-        "**/.elixir_ls": true
+        "**/.elixir_ls": true,
+        "**/.yarn": true
     },
     "[markdown]": {},
     "elixirLS.mixEnv": "dev",
@@ -22,6 +24,10 @@
         ]
     },
     "markdown.extension.toc.githubCompatibility": true,
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.enableBold": true,
+    "terminal.integrated.rightClickCopyPaste": true,
+    "terminal.integrated.fontFamily": "SauceCodeProNerdFontCompleteM-Regular",
     "terminal.integrated.profiles.osx": {
         "bash": {
             "path": "bash",
@@ -37,19 +43,35 @@
         "Jenkinsfile_build": "jenkinsfile",
         "Jenkinsfile_deploy": "jenkinsfile"
     },
-    "workbench.colorTheme": "Gruvbox Light (Medium)",
+    "workbench.colorTheme": "Gruvbox Light (Soft)",
+    "editor.bracketPairColorization.enabled": true,
     "editor.fontLigatures": false,
     "editor.formatOnSave": true,
     "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>?",
     "workbench.startupEditor": "newUntitledFile",
-    "elixirLS.dialyzerFormat": "dialyxir_long",
     "editor.minimap.enabled": false,
     "emmet.includeLanguages": {
-        "html-eex": "html"
+        "html-eex": "html",
+        "phoenix-heex": "html"
     },
     "diffEditor.ignoreTrimWhitespace": false,
     "gitlens.codeLens.scopes": [
         "document",
         "containers"
     ],
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": true,
+        "elixir": false,
+        "ruby": false
+    },
+    "editor.multiCursorModifier": "ctrlCmd",
+    "tailwindCSS.includeLanguages": {
+        "Elixir HTML (heex)": "heex"
+    },
+    "liveshare.presence": true,
+    "window.zoomLevel": 1
 }

@@ -2,6 +2,7 @@ cask_args appdir: '/Applications'
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-drivers'
+tap 'cantino/mcfly'
 
 # brews
 brew 'bat'
@@ -9,13 +10,19 @@ brew 'bash-completion'
 brew 'git'
 brew 'hub'
 brew 'gnupg2'
+brew 'gping'
+brew 'mcfly'
 brew 'mmv'
 brew 'postgresql', restart_service: true
+brew 'procs'
 brew 'reattach-to-user-namespace'
+brew 'ripgrep'
 brew 'stow'
+brew 'tldr'
 brew 'tmux'
 brew 'unixodbc'
 brew 'wrk'
+brew 'xh'
 
 
 # TODO - determine way to install 'asdf' version manager

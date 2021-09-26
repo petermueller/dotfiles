@@ -83,8 +83,10 @@ plugins=(
   docker
   encode64
   fd
+  gcloud
   git
   github
+  mcfly
   ripgrep
   ssh-agent
   tmux

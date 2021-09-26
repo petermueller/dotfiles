@@ -90,6 +90,20 @@
 					<string>bootleg</string>
 				</dict>
 			</dict>
+			<key>calendar</key>
+			<dict>
+				<key>date</key>
+				<date>2021-07-26T14:48:34Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>calendar</string>
+					<key>platform</key>
+					<string>hex</string>
+					<key>uniqueIdentifier</key>
+					<string>calendar</string>
+				</dict>
+			</dict>
 			<key>comeonin</key>
 			<dict>
 				<key>date</key>
@@ -135,7 +149,7 @@
 			<key>ecto</key>
 			<dict>
 				<key>date</key>
-				<date>2021-05-28T13:22:44Z</date>
+				<date>2021-08-27T18:03:42Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -149,7 +163,7 @@
 			<key>ecto_sql</key>
 			<dict>
 				<key>date</key>
-				<date>2021-06-01T13:28:01Z</date>
+				<date>2021-08-20T13:51:49Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -177,7 +191,7 @@
 			<key>guardian</key>
 			<dict>
 				<key>date</key>
-				<date>2021-01-13T20:54:56Z</date>
+				<date>2021-08-24T13:26:34Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -200,6 +214,20 @@
 					<string>hex</string>
 					<key>uniqueIdentifier</key>
 					<string>jason</string>
+				</dict>
+			</dict>
+			<key>joken</key>
+			<dict>
+				<key>date</key>
+				<date>2021-09-02T02:03:28Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>joken</string>
+					<key>platform</key>
+					<string>hex</string>
+					<key>uniqueIdentifier</key>
+					<string>joken</string>
 				</dict>
 			</dict>
 			<key>mox</key>
@@ -230,10 +258,52 @@
 					<string>myxql</string>
 				</dict>
 			</dict>
+			<key>nanoid</key>
+			<dict>
+				<key>date</key>
+				<date>2021-07-28T14:08:38Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>nanoid</string>
+					<key>platform</key>
+					<string>hex</string>
+					<key>uniqueIdentifier</key>
+					<string>nanoid</string>
+				</dict>
+			</dict>
+			<key>norm</key>
+			<dict>
+				<key>date</key>
+				<date>2021-07-26T20:56:44Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>norm</string>
+					<key>platform</key>
+					<string>hex</string>
+					<key>uniqueIdentifier</key>
+					<string>norm</string>
+				</dict>
+			</dict>
+			<key>open_api_spex</key>
+			<dict>
+				<key>date</key>
+				<date>2021-07-16T17:49:05Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>open_api_spex</string>
+					<key>platform</key>
+					<string>hex</string>
+					<key>uniqueIdentifier</key>
+					<string>open_api_spex</string>
+				</dict>
+			</dict>
 			<key>phoenix</key>
 			<dict>
 				<key>date</key>
-				<date>2021-05-11T13:18:49Z</date>
+				<date>2021-09-26T18:28:42Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -247,7 +317,7 @@
 			<key>phoenix_ecto</key>
 			<dict>
 				<key>date</key>
-				<date>2021-06-21T19:39:36Z</date>
+				<date>2021-08-18T13:44:20Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -261,7 +331,7 @@
 			<key>phoenix_html</key>
 			<dict>
 				<key>date</key>
-				<date>2021-01-05T20:41:05Z</date>
+				<date>2021-09-23T13:37:35Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -275,7 +345,7 @@
 			<key>phoenix_live_view</key>
 			<dict>
 				<key>date</key>
-				<date>2021-05-25T13:10:51Z</date>
+				<date>2021-09-23T13:37:36Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -289,7 +359,7 @@
 			<key>plug</key>
 			<dict>
 				<key>date</key>
-				<date>2021-03-08T13:57:45Z</date>
+				<date>2021-08-02T13:25:25Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -298,6 +368,20 @@
 					<string>hex</string>
 					<key>uniqueIdentifier</key>
 					<string>plug</string>
+				</dict>
+			</dict>
+			<key>plug_crypto</key>
+			<dict>
+				<key>date</key>
+				<date>2021-08-04T16:00:36Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>plug_crypto</string>
+					<key>platform</key>
+					<string>hex</string>
+					<key>uniqueIdentifier</key>
+					<string>plug_crypto</string>
 				</dict>
 			</dict>
 			<key>sentry</key>
@@ -317,7 +401,7 @@
 			<key>surface</key>
 			<dict>
 				<key>date</key>
-				<date>2021-06-17T18:39:48Z</date>
+				<date>2021-07-29T13:18:19Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -331,7 +415,7 @@
 			<key>tesla</key>
 			<dict>
 				<key>date</key>
-				<date>2021-04-06T14:41:33Z</date>
+				<date>2021-08-04T13:30:30Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -345,7 +429,7 @@
 			<key>timex</key>
 			<dict>
 				<key>date</key>
-				<date>2021-04-05T14:41:32Z</date>
+				<date>2021-08-03T13:25:26Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -356,10 +440,24 @@
 					<string>timex</string>
 				</dict>
 			</dict>
+			<key>tzdata</key>
+			<dict>
+				<key>date</key>
+				<date>2021-07-26T14:48:31Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>tzdata</string>
+					<key>platform</key>
+					<string>hex</string>
+					<key>uniqueIdentifier</key>
+					<string>tzdata</string>
+				</dict>
+			</dict>
 			<key>wallaby</key>
 			<dict>
 				<key>date</key>
-				<date>2021-06-03T18:20:57Z</date>
+				<date>2021-09-23T13:37:37Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -428,10 +526,58 @@
 	<dict>
 		<key>installed</key>
 		<dict>
+			<key>Alpinejs</key>
+			<dict>
+				<key>date</key>
+				<date>2021-09-16T14:42:29Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>AlpineJS</string>
+						<string>alpine js</string>
+						<string>alpine.js</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Alpinejs#readme</string>
+					<key>authorLinkText</key>
+					<string>Guill Lo</string>
+					<key>name</key>
+					<string>Alpine.js</string>
+					<key>platform</key>
+					<string>usercontribAlpinejs</string>
+					<key>uniqueIdentifier</key>
+					<string>Alpinejs</string>
+				</dict>
+			</dict>
+			<key>Bulma</key>
+			<dict>
+				<key>date</key>
+				<date>2021-09-16T14:31:40Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Bulma.io</string>
+						<string>bulma</string>
+						<string>bulma io</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Bulma#readme</string>
+					<key>authorLinkText</key>
+					<string>Luca Critelli, Guill Lo</string>
+					<key>name</key>
+					<string>Bulma</string>
+					<key>platform</key>
+					<string>usercontribBulma</string>
+					<key>uniqueIdentifier</key>
+					<string>Bulma</string>
+				</dict>
+			</dict>
 			<key>Kubernetes</key>
 			<dict>
 				<key>date</key>
-				<date>2021-06-29T13:38:26Z</date>
+				<date>2021-08-17T13:44:18Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -459,6 +605,8 @@
 	<dict>
 		<key>keywords</key>
 		<dict>
+			<key>~/Library/Application Support/Dash/DocSets/Elixir/Elixir.docset</key>
+			<string>ex:</string>
 			<key>~/Library/Application Support/Dash/DocSets/JavaScript/JavaScript.docset</key>
 			<string>js:</string>
 			<key>~/Library/Application Support/Dash/DocSets/Man_Pages/Man Pages.docset</key>
@@ -469,8 +617,12 @@
 			<string>bamboo:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/bootleg/bootleg.docset</key>
 			<string>bootleg:</string>
+			<key>~/Library/Application Support/Dash/Hex DocSets/calendar/calendar.docset</key>
+			<string>calendar:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/csv/csv.docset</key>
 			<string>csv:</string>
+			<key>~/Library/Application Support/Dash/Hex DocSets/decimal/decimal.docset</key>
+			<string>decimal:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/ecto/ecto.docset</key>
 			<string>ecto:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/ectosql/ecto_sql.docset</key>
@@ -479,10 +631,18 @@
 			<string>ex_machina:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/guardian/guardian.docset</key>
 			<string>guardian:</string>
+			<key>~/Library/Application Support/Dash/Hex DocSets/joken/joken.docset</key>
+			<string>joken:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/mox/mox.docset</key>
 			<string>mox:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/myxql/myxql.docset</key>
 			<string>ecto:</string>
+			<key>~/Library/Application Support/Dash/Hex DocSets/nanoid/nanoid.docset</key>
+			<string>nanoid:</string>
+			<key>~/Library/Application Support/Dash/Hex DocSets/norm/norm.docset</key>
+			<string>norm:</string>
+			<key>~/Library/Application Support/Dash/Hex DocSets/openapispex/open_api_spex.docset</key>
+			<string>spex:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/phoenix/phoenix.docset</key>
 			<string>phx:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/phoenixecto/phoenix_ecto.docset</key>
@@ -493,6 +653,8 @@
 			<string>phx:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/plug/plug.docset</key>
 			<string>plug:</string>
+			<key>~/Library/Application Support/Dash/Hex DocSets/plugcrypto/plug_crypto.docset</key>
+			<string>plug:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/sentry/sentry.docset</key>
 			<string>sentry:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/surface/surface.docset</key>
@@ -501,8 +663,12 @@
 			<string>tesla:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/timex/timex.docset</key>
 			<string>timex:</string>
+			<key>~/Library/Application Support/Dash/Hex DocSets/tzdata/tzdata.docset</key>
+			<string>tzdata:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/wallaby/wallaby.docset</key>
 			<string>wallaby:</string>
+			<key>~/Library/Application Support/Dash/User Contributed/Alpinejs/alpinejs.docset</key>
+			<string>alpine:</string>
 		</dict>
 	</dict>
 	<key>feeds</key>
@@ -645,6 +811,11 @@
 				<string>~/Library/Application Support/Dash/Hex DocSets/wallaby/wallaby.docset</string>
 				<string>~/Library/Application Support/Dash/Hex DocSets/bamboo/bamboo.docset</string>
 				<string>~/Library/Application Support/Dash/Hex DocSets/surface/surface.docset</string>
+				<string>~/Library/Application Support/Dash/Hex DocSets/myxql/myxql.docset</string>
+				<string>~/Library/Application Support/Dash/Hex DocSets/openapispex/open_api_spex.docset</string>
+				<string>~/Library/Application Support/Dash/Hex DocSets/sentry/sentry.docset</string>
+				<string>~/Library/Application Support/Dash/Hex DocSets/tzdata/tzdata.docset</string>
+				<string>~/Library/Application Support/Dash/Hex DocSets/calendar/calendar.docset</string>
 			</array>
 			<key>name</key>
 			<string>beam</string>
@@ -681,6 +852,7 @@
 				<string>~/Library/Application Support/Dash/Hex DocSets/wallaby/wallaby.docset</string>
 				<string>~/Library/Application Support/Dash/DocSets/React/React.docset</string>
 				<string>~/Library/Application Support/Dash/Hex DocSets/surface/surface.docset</string>
+				<string>~/Library/Application Support/Dash/Hex DocSets/openapispex/open_api_spex.docset</string>
 			</array>
 			<key>name</key>
 			<string>web</string>
