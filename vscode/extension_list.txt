@@ -3,11 +3,13 @@ alexanderbast.vscode-snazzy
 aliariff.auto-add-brackets
 bierner.markdown-preview-github-styles
 bradlc.vscode-tailwindcss
+bungcip.better-toml
 DotJoshJohnson.xml
 eamodio.gitlens
+fiazluthfi.bulma-snippets
 file-icons.file-icons
 florinpatrascu.vscode-elixir-snippets
-haaaad.ansible
+GitHub.copilot
 ivory-lab.jenkinsfile-support
 JakeBecker.elixir-ls
 jock.svg
@@ -20,6 +22,7 @@ ms-vsliveshare.vsliveshare
 msaraiva.surface
 octref.vetur
 pgourlain.erlang
+phoenixframework.phoenix
 sdras.night-owl
 swashata.beautiful-ui
 tomoki1207.pdf
