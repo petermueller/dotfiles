@@ -90,7 +90,6 @@ plugins=(
   ripgrep
   ssh-agent
   tmux
-  zsh_reload
   iterm2_shell_integration
   onelogin_aws
   prescribe_fit
