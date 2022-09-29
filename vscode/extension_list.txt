@@ -21,6 +21,7 @@ ms-vscode-remote.remote-containers
 ms-vsliveshare.vsliveshare
 msaraiva.surface
 octref.vetur
+pantajoe.vscode-elixir-credo
 pgourlain.erlang
 phoenixframework.phoenix
 sdras.night-owl

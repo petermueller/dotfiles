@@ -80,12 +80,12 @@ plugins=(
   brew
   cp
   dash
-  docker
+  # docker
   encode64
   fd
   gcloud
   git
-  github
+  gh
   mcfly
   ripgrep
   ssh-agent
@@ -94,6 +94,7 @@ plugins=(
   onelogin_aws
   prescribe_fit
   unorganized_aliases
+  yarn
 )
 
 source $ZSH/oh-my-zsh.sh

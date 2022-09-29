@@ -4,3 +4,6 @@ export ELIXIR_EDITOR="code"
 
 # Needed for some brew packages that put their binaries here
 export PATH="/usr/local/sbin:$PATH"
+
+# Custom bins from $HOME
+export PATH="$HOME/local/bin:$PATH"

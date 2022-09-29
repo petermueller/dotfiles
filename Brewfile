@@ -7,22 +7,29 @@ tap 'cantino/mcfly'
 # brews
 brew 'bat'
 brew 'bash-completion'
+brew 'diffr' # better diffing tool, used in git config
 brew 'git'
-brew 'hub'
+brew 'gh' # GitHub's CLI tool
 brew 'gnupg2'
-brew 'gping'
-brew 'mcfly'
-brew 'mmv'
+brew 'gping' # graphical ping
+brew 'jql' # JSON tool, inspired by `jq`
+brew 'lima' # macOS containerd/nerdctl (alternative to Docker Desktop, somewhat)
+brew 'mcfly' # History tool
+brew 'mmv' # multi-move
+brew 'nebula' # overlay network tool built on the Noise Protocol. Similar to TailScale
 brew 'postgresql', restart_service: true
-brew 'procs'
+brew 'procs' # modern replacement for ps, not backwards compatible
 brew 'reattach-to-user-namespace'
-brew 'ripgrep'
-brew 'stow'
-brew 'tldr'
-brew 'tmux'
+brew 'ripgrep' # grep, ack, ag (Silver Searcher) alternative but faster and better. `rg` is the command
+brew 'scrcopy' # Display and control your Android device. Vital for Android or demoing something over screenshare on a physical android
+brew 'stow' # a symlink "farm manager". Most package/version/dotfile managers do something similar, but stow is generic
+brew 'tesseract' # Optical Character Recognition (OCR) CLI
+brew 'tldr' # community maintained TL;DR for CLI tools. My *favorite* tool. It's amazing
+brew 'tmux' # used to fix pbcopy/pbpaste in older Apple (pre-2017), or non-Apple versions of tmux, or pre-built, non-GUI versions of VIM
 brew 'unixodbc'
-brew 'wrk'
-brew 'xh'
+brew 'wrk' # multi-threaded HTTP benchmarking tool
+brew 'xh' # curl/wget alternative. 2nd favorite tool.
+brew 'xz' # compress/decompress .xz format
 
 
 # TODO - determine way to install 'asdf' version manager

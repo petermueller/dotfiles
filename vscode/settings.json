@@ -13,7 +13,11 @@
     "files.exclude": {
         "**/_build": true,
         "**/.elixir_ls": true,
-        "**/.yarn": true
+        "**/.yarn": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
     },
     "[markdown]": {},
     "elixirLS.mixEnv": "dev",
@@ -44,6 +48,15 @@
         "Jenkinsfile_deploy": "jenkinsfile"
     },
     "workbench.colorTheme": "Gruvbox Light (Soft)",
+    "workbench.colorCustomizations": {
+        "[Gruvbox Light (Soft)]": {
+            "editor.selectionHighlightBackground": "#ebdbb2",
+            // "editor.selectionBackground": "#fdff0033",
+            // "editor.selectionHighlightBorder": "#ff0000",
+            "editor.selectionBackground": "#ebd396",
+            "editor.inactiveSelectionBackground": "#fdff0033",
+        }
+    },
     "editor.bracketPairColorization.enabled": true,
     "editor.fontLigatures": false,
     "editor.formatOnSave": true,
@@ -52,26 +65,38 @@
     "editor.minimap.enabled": false,
     "emmet.includeLanguages": {
         "html-eex": "html",
-        "phoenix-heex": "html"
+        "phoenix-heex": "html",
+        "postcss": "css",
     },
     "diffEditor.ignoreTrimWhitespace": false,
     "gitlens.codeLens.scopes": [
         "document",
         "containers"
     ],
-    "editor.inlineSuggest.enabled": true,
     "github.copilot.enable": {
         "*": true,
         "yaml": false,
         "plaintext": false,
         "markdown": true,
-        "elixir": false,
         "ruby": false
     },
     "editor.multiCursorModifier": "ctrlCmd",
     "tailwindCSS.includeLanguages": {
-        "Elixir HTML (heex)": "heex"
+        "Elixir HTML (heex)": "heex",
+        "Elixir HTML (sface)": "sface"
     },
     "liveshare.presence": true,
-    "window.zoomLevel": 1
+    "gitlens.codeLens.enabled": false,
+    "editor.quickSuggestions": {
+        "other": "on",
+        "comments": "off",
+        "strings": "off"
+    },
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredDarkColorTheme": "Gruvbox Dark (Soft)",
+    "workbench.preferredLightColorTheme": "Gruvbox Light (Soft)",
+    "editor.inlineSuggest.enabled": true,
+    "editor.unicodeHighlight.invisibleCharacters": true,
+    "editor.unicodeHighlight.ambiguousCharacters": true,
+    "redhat.telemetry.enabled": false
 }

@@ -24,6 +24,8 @@
       path: gitconfig.platform.darwin
     ~/.git-prompt.sh:
     ~/.iex.exs:
+    # For compatibility with sh scripts that aren't very intelligent about PATH
+    ~/.profile:
     ~/.pryrc:
     ~/.rspec:
     ~/.tmate.conf:
