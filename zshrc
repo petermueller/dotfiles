@@ -94,6 +94,7 @@ plugins=(
   onelogin_aws
   prescribe_fit
   unorganized_aliases
+  unorganized_misc
   yarn
 )
 
@@ -130,3 +131,6 @@ complete -o nospace -C /usr/local/bin/mc mc
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Loads fzf configs
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
