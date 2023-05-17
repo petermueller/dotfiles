@@ -7,3 +7,6 @@ export PATH="/usr/local/sbin:$PATH"
 
 # Custom bins from $HOME
 export PATH="$HOME/local/bin:$PATH"
+
+# Other bins
+export PATH="$HOME/.docker/bin:$PATH"
