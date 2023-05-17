@@ -20,7 +20,7 @@
         "**/.factorypath": true
     },
     "[markdown]": {},
-    "elixirLS.mixEnv": "dev",
+    // "elixirLS.mixEnv": "dev",
     "[elixir]": {
         "editor.defaultFormatter": "JakeBecker.elixir-ls",
         "editor.rulers": [
@@ -45,7 +45,8 @@
     "editor.largeFileOptimizations": false,
     "files.associations": {
         "Jenkinsfile_build": "jenkinsfile",
-        "Jenkinsfile_deploy": "jenkinsfile"
+        "Jenkinsfile_deploy": "jenkinsfile",
+        "*.heex": "phoenix-heex"
     },
     "workbench.colorTheme": "Gruvbox Light (Soft)",
     "workbench.colorCustomizations": {
@@ -98,5 +99,6 @@
     "editor.inlineSuggest.enabled": true,
     "editor.unicodeHighlight.invisibleCharacters": true,
     "editor.unicodeHighlight.ambiguousCharacters": true,
-    "redhat.telemetry.enabled": false
+    "redhat.telemetry.enabled": false,
+    "window.zoomLevel": 1
 }
