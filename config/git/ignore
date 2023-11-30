@@ -28,3 +28,4 @@ xcuserdata
 # elixir files
 _build/
 .elixir_ls/
+.lexical/
