@@ -1,4 +1,5 @@
 {
+    "diffEditor.experimental.useVersion2": true,
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
@@ -22,7 +23,7 @@
     "[markdown]": {},
     // "elixirLS.mixEnv": "dev",
     "[elixir]": {
-        "editor.defaultFormatter": "JakeBecker.elixir-ls",
+        "editor.defaultFormatter": "lexical-lsp.lexical",
         "editor.rulers": [
             98
         ]
@@ -59,7 +60,7 @@
         }
     },
     "editor.bracketPairColorization.enabled": true,
-    "editor.fontLigatures": false,
+    "editor.fontLigatures": true,
     "editor.formatOnSave": true,
     "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>?",
     "workbench.startupEditor": "newUntitledFile",
@@ -68,6 +69,7 @@
         "html-eex": "html",
         "phoenix-heex": "html",
         "postcss": "css",
+        "surface": "html"
     },
     "diffEditor.ignoreTrimWhitespace": false,
     "gitlens.codeLens.scopes": [
@@ -84,7 +86,8 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "tailwindCSS.includeLanguages": {
         "Elixir HTML (heex)": "heex",
-        "Elixir HTML (sface)": "sface"
+        "Elixir HTML (sface)": "sface",
+        "surface": "html"
     },
     "liveshare.presence": true,
     "gitlens.codeLens.enabled": false,
@@ -100,5 +103,12 @@
     "editor.unicodeHighlight.invisibleCharacters": true,
     "editor.unicodeHighlight.ambiguousCharacters": true,
     "redhat.telemetry.enabled": false,
-    "window.zoomLevel": 1
+    "githubPullRequests.pullBranch": "never",
+    "svg.preview.mode": "svg",
+    "editor.fontFamily": "'FiraCode Nerd Font Mono', 'SauceCodePro Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
+    "elixir-tools.nextls.enable": true,
+    "git.confirmSync": false,
+    "window.zoomLevel": 1,
+    "elixir-tools.nextLS.adapter": "tcp",
+    "elixir-tools.nextLS.trace.server": "messages"
 }
