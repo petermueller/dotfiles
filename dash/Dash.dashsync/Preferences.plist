@@ -30,7 +30,7 @@
 			<key>facebook/react-native</key>
 			<dict>
 				<key>date</key>
-				<date>2023-03-27T14:03:29Z</date>
+				<date>2023-05-26T14:26:03Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -66,7 +66,7 @@
 			<key>axon</key>
 			<dict>
 				<key>date</key>
-				<date>2023-02-18T18:47:40Z</date>
+				<date>2023-08-17T17:35:55Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -91,10 +91,24 @@
 					<string>bamboo</string>
 				</dict>
 			</dict>
+			<key>bandit</key>
+			<dict>
+				<key>date</key>
+				<date>2023-11-29T16:39:20Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>bandit</string>
+					<key>platform</key>
+					<string>hex</string>
+					<key>uniqueIdentifier</key>
+					<string>bandit</string>
+				</dict>
+			</dict>
 			<key>bcrypt_elixir</key>
 			<dict>
 				<key>date</key>
-				<date>2022-07-18T13:43:40Z</date>
+				<date>2023-08-27T03:26:41Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -136,7 +150,7 @@
 			<key>chromic_pdf</key>
 			<dict>
 				<key>date</key>
-				<date>2023-05-02T13:34:17Z</date>
+				<date>2023-09-28T14:10:59Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -150,7 +164,7 @@
 			<key>comeonin</key>
 			<dict>
 				<key>date</key>
-				<date>2022-01-19T15:57:40Z</date>
+				<date>2023-08-27T03:26:42Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -164,7 +178,7 @@
 			<key>credo</key>
 			<dict>
 				<key>date</key>
-				<date>2023-03-21T13:27:36Z</date>
+				<date>2023-11-17T06:55:02Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -178,7 +192,7 @@
 			<key>csv</key>
 			<dict>
 				<key>date</key>
-				<date>2022-12-04T02:07:42Z</date>
+				<date>2023-11-26T20:47:47Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -192,7 +206,7 @@
 			<key>db_connection</key>
 			<dict>
 				<key>date</key>
-				<date>2023-04-11T14:01:23Z</date>
+				<date>2023-10-16T13:34:10Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -220,7 +234,7 @@
 			<key>ecto</key>
 			<dict>
 				<key>date</key>
-				<date>2023-04-13T14:10:21Z</date>
+				<date>2023-11-14T14:38:43Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -234,7 +248,7 @@
 			<key>ecto_sql</key>
 			<dict>
 				<key>date</key>
-				<date>2023-04-11T14:01:19Z</date>
+				<date>2023-11-14T14:38:41Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -248,7 +262,7 @@
 			<key>ex_doc</key>
 			<dict>
 				<key>date</key>
-				<date>2023-03-30T14:55:29Z</date>
+				<date>2023-10-20T14:11:34Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -276,7 +290,7 @@
 			<key>explorer</key>
 			<dict>
 				<key>date</key>
-				<date>2023-05-11T13:52:59Z</date>
+				<date>2023-09-26T14:08:59Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -301,10 +315,38 @@
 					<string>faker</string>
 				</dict>
 			</dict>
+			<key>finitomata</key>
+			<dict>
+				<key>date</key>
+				<date>2023-08-24T14:00:10Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>finitomata</string>
+					<key>platform</key>
+					<string>hex</string>
+					<key>uniqueIdentifier</key>
+					<string>finitomata</string>
+				</dict>
+			</dict>
+			<key>fsmx</key>
+			<dict>
+				<key>date</key>
+				<date>2023-08-09T14:16:31Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>fsmx</string>
+					<key>platform</key>
+					<string>hex</string>
+					<key>uniqueIdentifier</key>
+					<string>fsmx</string>
+				</dict>
+			</dict>
 			<key>fun_with_flags</key>
 			<dict>
 				<key>date</key>
-				<date>2022-11-21T18:38:16Z</date>
+				<date>2023-08-29T13:50:16Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -315,10 +357,24 @@
 					<string>fun_with_flags</string>
 				</dict>
 			</dict>
+			<key>gen_state_machine</key>
+			<dict>
+				<key>date</key>
+				<date>2023-07-13T14:21:41Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>gen_state_machine</string>
+					<key>platform</key>
+					<string>hex</string>
+					<key>uniqueIdentifier</key>
+					<string>gen_state_machine</string>
+				</dict>
+			</dict>
 			<key>goth</key>
 			<dict>
 				<key>date</key>
-				<date>2023-03-24T13:58:41Z</date>
+				<date>2023-08-24T14:00:09Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -332,7 +388,7 @@
 			<key>guardian</key>
 			<dict>
 				<key>date</key>
-				<date>2022-11-26T18:27:35Z</date>
+				<date>2023-09-12T14:38:41Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -343,10 +399,24 @@
 					<string>guardian</string>
 				</dict>
 			</dict>
+			<key>horde</key>
+			<dict>
+				<key>date</key>
+				<date>2023-09-16T16:08:02Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>horde</string>
+					<key>platform</key>
+					<string>hex</string>
+					<key>uniqueIdentifier</key>
+					<string>horde</string>
+				</dict>
+			</dict>
 			<key>jason</key>
 			<dict>
 				<key>date</key>
-				<date>2022-11-21T18:38:14Z</date>
+				<date>2023-07-07T14:54:05Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -374,7 +444,7 @@
 			<key>kino</key>
 			<dict>
 				<key>date</key>
-				<date>2023-05-15T14:13:18Z</date>
+				<date>2023-11-15T15:06:58Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -388,7 +458,7 @@
 			<key>kino_vega_lite</key>
 			<dict>
 				<key>date</key>
-				<date>2023-03-17T14:00:05Z</date>
+				<date>2023-11-17T06:54:15Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -402,7 +472,7 @@
 			<key>mox</key>
 			<dict>
 				<key>date</key>
-				<date>2022-05-31T13:26:04Z</date>
+				<date>2023-09-20T14:05:33Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -430,7 +500,7 @@
 			<key>nanoid</key>
 			<dict>
 				<key>date</key>
-				<date>2021-07-28T14:08:38Z</date>
+				<date>2023-07-13T13:47:28Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -444,7 +514,7 @@
 			<key>nebulex</key>
 			<dict>
 				<key>date</key>
-				<date>2023-05-15T14:13:15Z</date>
+				<date>2023-07-16T15:00:46Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -500,7 +570,7 @@
 			<key>nx</key>
 			<dict>
 				<key>date</key>
-				<date>2023-04-15T20:42:37Z</date>
+				<date>2023-11-13T14:01:51Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -514,7 +584,7 @@
 			<key>oban</key>
 			<dict>
 				<key>date</key>
-				<date>2023-05-12T13:52:59Z</date>
+				<date>2023-10-26T17:56:25Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -528,7 +598,7 @@
 			<key>open_api_spex</key>
 			<dict>
 				<key>date</key>
-				<date>2023-05-06T20:52:39Z</date>
+				<date>2023-08-23T14:00:09Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -542,7 +612,7 @@
 			<key>opentelemetry</key>
 			<dict>
 				<key>date</key>
-				<date>2023-03-22T13:55:32Z</date>
+				<date>2023-08-16T17:00:03Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -556,7 +626,7 @@
 			<key>opentelemetry_api</key>
 			<dict>
 				<key>date</key>
-				<date>2023-02-22T19:14:18Z</date>
+				<date>2023-08-16T17:00:03Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -570,7 +640,7 @@
 			<key>opentelemetry_exporter</key>
 			<dict>
 				<key>date</key>
-				<date>2023-04-28T15:38:41Z</date>
+				<date>2023-06-23T17:46:43Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -581,10 +651,24 @@
 					<string>opentelemetry_exporter</string>
 				</dict>
 			</dict>
+			<key>packmatic</key>
+			<dict>
+				<key>date</key>
+				<date>2023-11-28T20:04:04Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>packmatic</string>
+					<key>platform</key>
+					<string>hex</string>
+					<key>uniqueIdentifier</key>
+					<string>packmatic</string>
+				</dict>
+			</dict>
 			<key>phoenix</key>
 			<dict>
 				<key>date</key>
-				<date>2023-03-21T13:27:31Z</date>
+				<date>2023-11-03T14:17:33Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -598,7 +682,7 @@
 			<key>phoenix_html</key>
 			<dict>
 				<key>date</key>
-				<date>2023-02-27T14:45:03Z</date>
+				<date>2023-10-10T13:53:25Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -612,7 +696,7 @@
 			<key>phoenix_live_view</key>
 			<dict>
 				<key>date</key>
-				<date>2023-03-17T14:00:03Z</date>
+				<date>2023-10-09T13:53:29Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -623,10 +707,24 @@
 					<string>phoenix_live_view</string>
 				</dict>
 			</dict>
+			<key>phoenix_pubsub</key>
+			<dict>
+				<key>date</key>
+				<date>2023-06-28T18:47:12Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>phoenix_pubsub</string>
+					<key>platform</key>
+					<string>hex</string>
+					<key>uniqueIdentifier</key>
+					<string>phoenix_pubsub</string>
+				</dict>
+			</dict>
 			<key>phoenix_template</key>
 			<dict>
 				<key>date</key>
-				<date>2023-05-10T14:19:33Z</date>
+				<date>2023-07-16T15:00:47Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -640,7 +738,7 @@
 			<key>phoenix_view</key>
 			<dict>
 				<key>date</key>
-				<date>2022-11-21T18:38:20Z</date>
+				<date>2023-10-30T14:17:31Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -668,7 +766,7 @@
 			<key>plug</key>
 			<dict>
 				<key>date</key>
-				<date>2023-03-24T13:58:38Z</date>
+				<date>2023-11-14T14:38:42Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -696,7 +794,7 @@
 			<key>plug_crypto</key>
 			<dict>
 				<key>date</key>
-				<date>2023-03-13T14:00:03Z</date>
+				<date>2023-10-06T13:59:03Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -710,7 +808,7 @@
 			<key>sentry</key>
 			<dict>
 				<key>date</key>
-				<date>2021-03-12T16:43:30Z</date>
+				<date>2023-11-27T20:47:47Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -724,7 +822,7 @@
 			<key>surface</key>
 			<dict>
 				<key>date</key>
-				<date>2023-04-28T07:15:59Z</date>
+				<date>2023-11-08T14:34:32Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -738,7 +836,7 @@
 			<key>tesla</key>
 			<dict>
 				<key>date</key>
-				<date>2023-05-16T14:13:13Z</date>
+				<date>2023-10-26T17:56:23Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -747,6 +845,20 @@
 					<string>hex</string>
 					<key>uniqueIdentifier</key>
 					<string>tesla</string>
+				</dict>
+			</dict>
+			<key>thousand_island</key>
+			<dict>
+				<key>date</key>
+				<date>2023-11-29T16:39:30Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>thousand_island</string>
+					<key>platform</key>
+					<string>hex</string>
+					<key>uniqueIdentifier</key>
+					<string>thousand_island</string>
 				</dict>
 			</dict>
 			<key>timex</key>
@@ -780,7 +892,7 @@
 			<key>vega_lite</key>
 			<dict>
 				<key>date</key>
-				<date>2023-03-27T14:03:15Z</date>
+				<date>2023-08-19T18:42:58Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -836,7 +948,7 @@
 			<key>wallaby</key>
 			<dict>
 				<key>date</key>
-				<date>2023-04-04T19:19:42Z</date>
+				<date>2023-08-15T00:07:49Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -862,6 +974,34 @@
 					<string>hex</string>
 					<key>uniqueIdentifier</key>
 					<string>bcrypt</string>
+				</dict>
+			</dict>
+			<key>gearbox</key>
+			<dict>
+				<key>date</key>
+				<date>2023-07-13T03:22:09Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>gearbox</string>
+					<key>platform</key>
+					<string>hex</string>
+					<key>uniqueIdentifier</key>
+					<string>gearbox</string>
+				</dict>
+			</dict>
+			<key>machinery</key>
+			<dict>
+				<key>date</key>
+				<date>2023-07-13T03:22:40Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>machinery</string>
+					<key>platform</key>
+					<string>hex</string>
+					<key>uniqueIdentifier</key>
+					<string>machinery</string>
 				</dict>
 			</dict>
 			<key>phoenix_ecto</key>
@@ -993,7 +1133,7 @@
 			<key>Tailwind_CSS</key>
 			<dict>
 				<key>date</key>
-				<date>2022-06-19T17:53:46Z</date>
+				<date>2023-11-07T08:06:01Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -1036,6 +1176,8 @@
 			<string>axon:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/bamboo/bamboo.docset</key>
 			<string>bamboo:</string>
+			<key>~/Library/Application Support/Dash/Hex DocSets/bandit/bandit.docset</key>
+			<string>bandit:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/bootleg/bootleg.docset</key>
 			<string>bootleg:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/calendar/calendar.docset</key>
@@ -1062,12 +1204,22 @@
 			<string>explorer:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/faker/faker.docset</key>
 			<string>faker:</string>
+			<key>~/Library/Application Support/Dash/Hex DocSets/finitomata/finitomata.docset</key>
+			<string>fsm:</string>
+			<key>~/Library/Application Support/Dash/Hex DocSets/fsmx/fsmx.docset</key>
+			<string>fsm:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/funwithflags/fun_with_flags.docset</key>
 			<string>flags:</string>
+			<key>~/Library/Application Support/Dash/Hex DocSets/gearbox/gearbox.docset</key>
+			<string>fsm:</string>
+			<key>~/Library/Application Support/Dash/Hex DocSets/genstatemachine/gen_state_machine.docset</key>
+			<string>fsm:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/goth/goth.docset</key>
 			<string>goth:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/guardian/guardian.docset</key>
 			<string>guardian:</string>
+			<key>~/Library/Application Support/Dash/Hex DocSets/horde/horde.docset</key>
+			<string>horde:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/jason/jason.docset</key>
 			<string>jason:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/joken/joken.docset</key>
@@ -1076,6 +1228,8 @@
 			<string>kino:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/kinovegalite/kino_vega_lite.docset</key>
 			<string>kino:</string>
+			<key>~/Library/Application Support/Dash/Hex DocSets/machinery/machinery.docset</key>
+			<string>fsm:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/mox/mox.docset</key>
 			<string>mox:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/myxql/myxql.docset</key>
@@ -1102,6 +1256,8 @@
 			<string>otel:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/opentelemetryexporter/opentelemetry_exporter.docset</key>
 			<string>otel:</string>
+			<key>~/Library/Application Support/Dash/Hex DocSets/packmatic/packmatic.docset</key>
+			<string>packmatic</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/phoenix/phoenix.docset</key>
 			<string>phx:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/phoenixecto/phoenix_ecto.docset</key>
@@ -1109,6 +1265,8 @@
 			<key>~/Library/Application Support/Dash/Hex DocSets/phoenixhtml/phoenix_html.docset</key>
 			<string>phx:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/phoenixliveview/phoenix_live_view.docset</key>
+			<string>phx:</string>
+			<key>~/Library/Application Support/Dash/Hex DocSets/phoenixpubsub/phoenix_pubsub.docset</key>
 			<string>phx:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/phoenixtemplate/phoenix_template.docset</key>
 			<string>phx:</string>
@@ -1132,6 +1290,8 @@
 			<string>surface:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/tesla/tesla.docset</key>
 			<string>tesla:</string>
+			<key>~/Library/Application Support/Dash/Hex DocSets/thousandisland/thousand_island.docset</key>
+			<string>bandit:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/timex/timex.docset</key>
 			<string>timex:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/tzdata/tzdata.docset</key>
