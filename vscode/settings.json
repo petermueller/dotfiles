@@ -107,7 +107,6 @@
     "svg.preview.mode": "svg",
     "editor.fontFamily": "'FiraCode Nerd Font Mono', 'SauceCodePro Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
     "elixir-tools.nextls.enable": true,
-    "git.confirmSync": false,
     "window.zoomLevel": 1,
     "elixir-tools.nextLS.adapter": "tcp",
     "elixir-tools.nextLS.trace.server": "messages"
