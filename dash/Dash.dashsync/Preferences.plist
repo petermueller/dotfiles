@@ -178,7 +178,7 @@
 			<key>credo</key>
 			<dict>
 				<key>date</key>
-				<date>2023-11-17T06:55:02Z</date>
+				<date>2023-12-07T15:09:19Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -234,7 +234,7 @@
 			<key>ecto</key>
 			<dict>
 				<key>date</key>
-				<date>2023-11-14T14:38:43Z</date>
+				<date>2023-12-07T15:09:17Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -248,7 +248,7 @@
 			<key>ecto_sql</key>
 			<dict>
 				<key>date</key>
-				<date>2023-11-14T14:38:41Z</date>
+				<date>2023-12-07T15:09:13Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -290,7 +290,7 @@
 			<key>explorer</key>
 			<dict>
 				<key>date</key>
-				<date>2023-09-26T14:08:59Z</date>
+				<date>2023-12-01T20:47:51Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -486,7 +486,7 @@
 			<key>myxql</key>
 			<dict>
 				<key>date</key>
-				<date>2022-09-22T20:18:50Z</date>
+				<date>2023-12-04T14:25:39Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -808,7 +808,7 @@
 			<key>sentry</key>
 			<dict>
 				<key>date</key>
-				<date>2023-11-27T20:47:47Z</date>
+				<date>2023-11-30T20:47:48Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -957,6 +957,20 @@
 					<string>hex</string>
 					<key>uniqueIdentifier</key>
 					<string>wallaby</string>
+				</dict>
+			</dict>
+			<key>zstream</key>
+			<dict>
+				<key>date</key>
+				<date>2023-12-04T20:12:31Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>zstream</string>
+					<key>platform</key>
+					<string>hex</string>
+					<key>uniqueIdentifier</key>
+					<string>zstream</string>
 				</dict>
 			</dict>
 		</dict>
@@ -1133,7 +1147,7 @@
 			<key>Tailwind_CSS</key>
 			<dict>
 				<key>date</key>
-				<date>2023-11-07T08:06:01Z</date>
+				<date>2023-12-07T15:09:12Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -1145,7 +1159,7 @@
 					<key>authorLinkHref</key>
 					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Tailwind_CSS#readme</string>
 					<key>authorLinkText</key>
-					<string>Ben Booth, Guill Lo</string>
+					<string>Ben Booth, Guill Lo, Akinori Musha</string>
 					<key>name</key>
 					<string>Tailwind CSS</string>
 					<key>platform</key>
@@ -1306,6 +1320,8 @@
 			<string>waffle:</string>
 			<key>~/Library/Application Support/Dash/Hex DocSets/wallaby/wallaby.docset</key>
 			<string>wallaby:</string>
+			<key>~/Library/Application Support/Dash/Hex DocSets/zstream/zstream.docset</key>
+			<string>zstream:</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Alpinejs/alpinejs.docset</key>
 			<string>alpine:</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Tailwind CSS/tailwindcss.docset</key>
