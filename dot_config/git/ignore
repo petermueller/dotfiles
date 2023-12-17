@@ -1,0 +1,31 @@
+# eclipse files
+.classpath
+.project
+.settings/
+# maven output directory
+target/
+# ant output directory
+build/
+# vi swap files
+*.swp
+# intellij files
+.idea/
+*.iml
+*.ipr
+*.iws
+# sublime files
+*.sublime-project
+*.sublime-workspace
+# osx files
+.DS_Store
+# xcode 3
+*.pbxuser
+*.perspectivev3
+*.mode1v3
+build
+# xcode 4
+xcuserdata
+# elixir files
+_build/
+.elixir_ls/
+.lexical/

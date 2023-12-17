@@ -1,0 +1,8 @@
+{{ if eq .chezmoi.os "darwin" }}
+[credential]
+  helper = osxkeychain
+[core]
+  pager = diffr --line-numbers --colors refine-added:none:background:0x33,0x99,0x33:bold --colors added:none:background:0x33,0x55,0x33 --colors refine-removed:none:background:0x99,0x33,0x33:bold --colors removed:none:background:0x55,0x33,0x33 | less -R
+[interactive]
+    diffFilter = diffr --line-numbers --colors refine-added:none:background:0x33,0x99,0x33:bold --colors added:none:background:0x33,0x55,0x33 --colors refine-removed:none:background:0x99,0x33,0x33:bold --colors removed:none:background:0x55,0x33,0x33
+{{ end }}

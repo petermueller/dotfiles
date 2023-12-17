@@ -1,0 +1,50 @@
+[user]
+  name = Peter Mueller
+  email = peter.kh.mueller@gmail.com
+  signingkey = D305123C952C101A
+[diff]
+  renames = true
+[alias]
+  st      = status --short
+  ds      = diff --cached
+  co      = checkout
+  cp      = cherry-pick
+  lg      = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset' --date=relative
+  lgo     = log --all --graph --oneline --decorate
+  put     = push origin HEAD
+  please  = push --force-with-lease origin HEAD
+  gone    = ! "git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D"
+  sha     = rev-parse HEAD
+[include]
+  path = ~/.gitconfig.platform
+
+#[commit]
+#  gpgsign = true
+
+[core]
+	excludesfile = ~/.config/git/ignore
+
+[color]
+  ui = always
+
+[color "diff-highlight"]
+  oldNormal = red
+  oldHighlight = red ul 52
+  newNormal = green
+  newHighlight = green ul 22
+
+[color "diff"]
+  commit = green
+  meta = yellow
+  frag = cyan
+  old = red
+  new = green
+  whitespace = red reverse
+
+[init]
+	defaultBranch = main
+
+[pull]
+  ff = only
+[push]
+  default = nothing

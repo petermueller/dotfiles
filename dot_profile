@@ -1,0 +1,6 @@
+# For compatibility with things that aren't intelligent about PATH, and are explicitly using /bin/sh, e.g. Xcode
+
+# asdf-vm
+. $HOME/.asdf/asdf.sh
+
+# alias docker="limactl shell default"
