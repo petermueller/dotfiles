@@ -1,0 +1,113 @@
+{
+  "diffEditor.experimental.useVersion2": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "editor.tabSize": 2,
+  "workbench.iconTheme": "file-icons",
+  "window.title": "${dirty}${activeEditorShort}${separator}${activeFolderMedium} [${rootName}]",
+  "files.watcherExclude": {
+    "**/_build/**": true,
+    "**/.elixir_ls/**": true,
+    "**/.yarn/**": true
+  },
+  "files.exclude": {
+    "**/_build": true,
+    "**/.elixir_ls": true,
+    "**/.yarn": true,
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "[markdown]": {},
+  // "elixirLS.mixEnv": "dev",
+  "[elixir]": {
+    "editor.defaultFormatter": "lexical-lsp.lexical",
+    "editor.rulers": [
+      98
+    ]
+  },
+  "markdown.extension.toc.githubCompatibility": true,
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.enableBold": true,
+  "terminal.integrated.rightClickCopyPaste": true,
+  "terminal.integrated.fontFamily": "SauceCodeProNerdFontCompleteM-Regular",
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash"
+    },
+    "zsh (login)": {
+      "path": "zsh"
+    }
+  },
+  "terminal.integrated.defaultProfile.osx": "zsh (login)",
+  "editor.largeFileOptimizations": false,
+  "files.associations": {
+    "Jenkinsfile_build": "jenkinsfile",
+    "Jenkinsfile_deploy": "jenkinsfile",
+    "*.heex": "phoenix-heex"
+  },
+  "workbench.colorTheme": "Gruvbox Light (Soft)",
+  "workbench.colorCustomizations": {
+    "[Gruvbox Light (Soft)]": {
+      "editor.selectionHighlightBackground": "#ebdbb2",
+      // "editor.selectionBackground": "#fdff0033",
+      // "editor.selectionHighlightBorder": "#ff0000",
+      "editor.selectionBackground": "#ebd396",
+      "editor.inactiveSelectionBackground": "#fdff0033",
+    }
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>?",
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.minimap.enabled": false,
+  "emmet.includeLanguages": {
+    "html-eex": "html",
+    "phoenix-heex": "html",
+    "postcss": "css",
+    "surface": "html"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "gitlens.codeLens.scopes": [
+    "document",
+    "containers"
+  ],
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": true,
+    "ruby": false
+  },
+  "editor.multiCursorModifier": "ctrlCmd",
+  "tailwindCSS.includeLanguages": {
+    "Elixir HTML (heex)": "heex",
+    "Elixir HTML (sface)": "sface",
+    "surface": "html"
+  },
+  "liveshare.presence": true,
+  "gitlens.codeLens.enabled": false,
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "off"
+  },
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredDarkColorTheme": "Gruvbox Dark (Soft)",
+  "workbench.preferredLightColorTheme": "Gruvbox Light (Soft)",
+  "editor.inlineSuggest.enabled": true,
+  "editor.unicodeHighlight.invisibleCharacters": true,
+  "editor.unicodeHighlight.ambiguousCharacters": true,
+  "redhat.telemetry.enabled": false,
+  "githubPullRequests.pullBranch": "never",
+  "svg.preview.mode": "svg",
+  "editor.fontFamily": "'FiraCode Nerd Font Mono', 'SauceCodePro Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
+  "elixir-tools.nextls.enable": true,
+  "window.zoomLevel": 1,
+  "elixir-tools.nextLS.adapter": "tcp",
+  "elixir-tools.nextLS.trace.server": "messages"
+}
