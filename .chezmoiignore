@@ -1,6 +1,8 @@
 README
 LICENSE
 
+vscode/
+
 {{- if ne .chezmoi.os "darwin" }}
 Library/Application Support/iTerm2/DynamicProfiles/dynamic_profile.json
 Library/KeyBindings/DefaultKeyBinding.dict
