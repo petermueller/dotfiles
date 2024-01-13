@@ -92,7 +92,6 @@ plugins=(
   ssh-agent
   tmux
   iterm2_shell_integration
-  onelogin_aws
   prescribe_fit
   unorganized_aliases
   unorganized_misc
