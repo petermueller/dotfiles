@@ -91,6 +91,7 @@ plugins=(
   mcfly
   ripgrep
   ssh-agent
+  gpg-agent
   tmux
   # iterm2_shell_integration
   prescribe_fit

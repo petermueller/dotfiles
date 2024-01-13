@@ -1,7 +1,8 @@
 [user]
   name = Peter Mueller
-  email = peter.kh.mueller@gmail.com
-  signingkey = D305123C952C101A
+  email = 6015288+petermueller@users.noreply.github.com
+  signingkey = E8F1FB621293CE3D
+
 [diff]
   renames = true
 [alias]
@@ -18,8 +19,8 @@
 [include]
   path = ~/.gitconfig.platform
 
-#[commit]
-#  gpgsign = true
+[commit]
+  gpgsign = true
 
 [core]
 	excludesfile = ~/.config/git/ignore
