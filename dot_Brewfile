@@ -1,8 +1,5 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
-tap "homebrew/core"
 tap "homebrew/services"
 
 tap "cantino/mcfly"
@@ -29,7 +26,7 @@ brew "postgresql", restart_service: true
 brew "procs" # modern replacement for ps, not backwards compatible
 brew "reattach-to-user-namespace"
 brew "ripgrep" # grep, ack, ag (Silver Searcher) alternative but faster and better. `rg` is the command
-brew "scrcopy" # Display and control your Android device. Vital for Android or demoing something over screenshare on a physical android
+brew "scrcpy" # Display and control your Android device. Vital for Android or demoing something over screenshare on a physical android
 brew "sslscan" # Check SSL/TLS services for supported cipher suites
 brew "starship" # Cross-shell prompt, instead of Powerlevel10k or others
 brew "tesseract" # Optical Character Recognition (OCR) CLI
@@ -70,7 +67,7 @@ cask "firefox"
 cask "font-fira-code-nerd-font"
 cask "font-sauce-code-pro-nerd-font"
 cask "gimp"
-cask "google-backup-and-sync"
+cask "google-drive"
 cask "google-chrome"
 cask "google-cloud-sdk"
 cask "iterm2"
