@@ -1,3 +1,5 @@
 github.com:
     user: petermueller
     git_protocol: ssh
+    users:
+        petermueller:
