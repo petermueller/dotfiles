@@ -1,0 +1,23 @@
+[".oh-my-zsh"]
+type = "archive"
+url = "https://github.com/ohmyzsh/ohmyzsh/archive/master.tar.gz"
+exact = true
+stripComponents = 1
+refreshPeriod = "168h"
+
+[".asdf"]
+type = "archive"
+url = "https://github.com/asdf-vm/asdf/archive/v0.13.1.tar.gz"
+exact = true
+stripComponents = 1
+
+
+["local/bin/mise"]
+type = "file"
+refreshPeriod = "672h"
+executable = true
+{{ if eq .chezmoi.os "darwin" -}}
+url = "https://mise.jdx.dev/mise-latest-macos-{{ .chezmoi.arch }}"
+{{ else }}
+url = "https://mise.jdx.dev/mise-latest-{{ .chezmoi.os }}-{{ .chezmoi.arch }}"
+{{- end }}
