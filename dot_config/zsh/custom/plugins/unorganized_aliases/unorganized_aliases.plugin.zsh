@@ -11,6 +11,7 @@ alias ohmyzsh="e ~/.oh-my-zsh"
 
 alias tmc="clear && tmux clear-history"
 alias json="jql"
+alias dps="docker ps --format 'table {{.Names}}\t{{.Ports}}'"
 
 
 ttf() {
