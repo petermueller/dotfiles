@@ -23,7 +23,7 @@
   "[markdown]": {},
   // "elixirLS.mixEnv": "dev",
   "[elixir]": {
-    "editor.defaultFormatter": "lexical-lsp.lexical",
+    "editor.defaultFormatter": "JakeBecker.elixir-ls",
     "editor.rulers": [
       98
     ]
@@ -49,7 +49,7 @@
     "Jenkinsfile_deploy": "jenkinsfile",
     "*.heex": "phoenix-heex"
   },
-  "workbench.colorTheme": "Gruvbox Light (Soft)",
+  "workbench.colorTheme": "Gruvbox Dark (Soft)",
   "workbench.colorCustomizations": {
     "[Gruvbox Light (Soft)]": {
       "editor.selectionHighlightBackground": "#ebdbb2",
@@ -69,7 +69,8 @@
     "html-eex": "html",
     "phoenix-heex": "html",
     "postcss": "css",
-    "surface": "html"
+    "surface": "html",
+    "elixir": "html"
   },
   "diffEditor.ignoreTrimWhitespace": false,
   "gitlens.codeLens.scopes": [
@@ -83,11 +84,11 @@
     "markdown": true,
     "ruby": false
   },
-  "editor.multiCursorModifier": "ctrlCmd",
   "tailwindCSS.includeLanguages": {
-    "Elixir HTML (heex)": "heex",
-    "Elixir HTML (sface)": "sface",
-    "surface": "html"
+    "html-eex": "html",
+    "phoenix-heex": "html",
+    "surface": "html",
+    "elixir": "html"
   },
   "liveshare.presence": true,
   "gitlens.codeLens.enabled": false,
@@ -108,6 +109,7 @@
   "editor.fontFamily": "'FiraCode Nerd Font Mono', 'SauceCodePro Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
   "elixir-tools.nextls.enable": true,
   "window.zoomLevel": 1,
-  "elixir-tools.nextLS.adapter": "tcp",
-  "elixir-tools.nextLS.trace.server": "messages"
+  "elixir-tools.nextLS.trace.server": "messages",
+  "elixir-tools.nextLS.experimental.completions.enable": true,
+  "elixir-tools.nextLS.spitfire": true
 }
