@@ -78,8 +78,8 @@ ZSH_CUSTOM="$HOME/.config/zsh/custom"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   # asdf
-  mise
   brew
+  mise
   cp
   dash
   # docker
