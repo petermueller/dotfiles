@@ -1,7 +1,3 @@
-tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
-tap "homebrew/services"
-
 tap "cantino/mcfly"
 tap "elixir-tools/tap"
 tap "superfly/tap"
@@ -83,7 +79,6 @@ cask "steam"
 cask "telegram"
 cask "visual-studio-code"
 cask "warp"
-cask "zsa-wally" #ergodox-ex keyboard flashing tool
 
 # mac app store installs
 
