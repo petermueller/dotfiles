@@ -111,5 +111,7 @@
   "window.zoomLevel": 1,
   "elixir-tools.nextLS.trace.server": "messages",
   "elixir-tools.nextLS.experimental.completions.enable": true,
-  "elixir-tools.nextLS.spitfire": true
+  "elixir-tools.nextLS.spitfire": true,
+  "chat.commandCenter.enabled": false,
+  "gitlens.launchpad.indicator.enabled": false
 }

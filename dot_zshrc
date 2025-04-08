@@ -82,14 +82,14 @@ plugins=(
   mise
   cp
   dash
-  # docker
+  docker
   encode64
-  fd
+  # fd
   gcloud
   git
   gh
   mcfly
-  ripgrep
+  # ripgrep
   ssh-agent
   gpg-agent
   tmux

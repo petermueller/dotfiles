@@ -164,5 +164,14 @@
     "key": "tab",
     "command": "-editor.action.inlineSuggest.commit",
     "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
+  },
+  {
+    "key": "shift+cmd+/",
+    "command": "workbench.view.extension.continue"
+  },
+  {
+    "key": "alt+cmd+/",
+    "command": "-swift.insertFunctionComment",
+    "when": "editorTextFocus"
   }
 ]
