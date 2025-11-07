@@ -7,6 +7,7 @@ tap "ycd/tap"
 brew "bat"
 brew "bash-completion"
 brew "diffr" # better diffing tool, used in git config
+brew "eza" # Better alternative to ls
 brew "fzf" # Fuzzy-finder
 brew "git"
 brew "gh" # GitHub's CLI tool
@@ -14,7 +15,6 @@ brew "gnupg2"
 brew "gping" # graphical ping
 brew "jql" # JSON tool, inspired by `jq`
 brew "lima" # macOS containerd/nerdctl (alternative to Docker Desktop, somewhat)
-brew "lsd" # colorful clone of ls
 brew "mcfly" # History tool
 brew "mmv" # multi-move
 brew "nebula" # overlay network tool built on the Noise Protocol. Similar to TailScale
