@@ -1,6 +1,8 @@
 export ERL_AFLAGS="-kernel shell_history enabled"
 
 export ELIXIR_EDITOR="code"
+export PLUG_EDITOR="vscode://file/__FILE__:__LINE__"
+export NODE_EXTRA_CA_CERTS="$HOME/Library/Application Support/mkcert/rootCA.pem"
 
 # Needed for some brew packages that put their binaries here
 export PATH="/usr/local/sbin:$PATH"

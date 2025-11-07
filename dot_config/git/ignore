@@ -29,3 +29,5 @@ xcuserdata
 _build/
 .elixir_ls/
 .lexical/
+
+**/.claude/settings.local.json

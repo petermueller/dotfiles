@@ -26,7 +26,7 @@ brew "scrcpy" # Display and control your Android device. Vital for Android or de
 brew "sslscan" # Check SSL/TLS services for supported cipher suites
 brew "starship" # Cross-shell prompt, instead of Powerlevel10k or others
 brew "tesseract" # Optical Character Recognition (OCR) CLI
-brew "tldr" # community maintained TL;DR for CLI tools. My *favorite* tool. It's amazing
+brew "tlrc" # community maintained TL;DR for CLI tools. My *favorite* tool. It's amazing (Rust client)
 brew "tmux" # used to fix pbcopy/pbpaste in older Apple (pre-2017), or non-Apple versions of tmux, or pre-built, non-GUI versions of VIM
 brew "unixodbc"
 brew "wrk" # multi-threaded HTTP benchmarking tool
