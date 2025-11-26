@@ -94,7 +94,7 @@ plugins=(
   gpg-agent
   tmux
   # iterm2_shell_integration
-  prescribe_fit
+  # prescribe_fit
   unorganized_aliases
   unorganized_misc
   yarn
