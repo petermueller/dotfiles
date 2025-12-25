@@ -5,6 +5,8 @@
 
 [diff]
   renames = true
+  external = difft
+
 [alias]
   st      = status --short
   ds      = diff --cached
@@ -18,6 +20,9 @@
   sha     = rev-parse HEAD
 [include]
   path = ~/.gitconfig.platform
+
+[includeIf "gitdir:~/work/"]
+  path = ~/.gitconfig-work
 
 [commit]
   gpgsign = true

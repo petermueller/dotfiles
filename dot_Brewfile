@@ -32,7 +32,7 @@ brew "unixodbc"
 brew "wrk" # multi-threaded HTTP benchmarking tool
 brew "xh" # curl/wget alternative. 2nd favorite tool.
 brew "xz" # compress/decompress .xz format
-brew "zsh"
+brew "fish" # The friendly interactive shell
 
 brew "elixir-tools/tap/next-ls"
 brew "superfly/tap/flyctl" # Fly.io's CLI

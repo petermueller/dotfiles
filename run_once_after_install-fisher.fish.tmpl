@@ -1,0 +1,26 @@
+#!/usr/bin/env fish
+# Install fisher plugin manager for fish shell
+
+# Check if fish is installed
+if not command -v fish &>/dev/null
+    echo "Fish shell not installed. Run 'brew bundle' first."
+    exit 1
+end
+
+# Install fisher if not already installed
+if not test -f ~/.config/fish/functions/fisher.fish
+    echo "Installing fisher..."
+    fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
+else
+    echo "Fisher already installed"
+end
+
+# Install plugins from fish_plugins file
+if test -f ~/.config/fish/fish_plugins
+    echo "Installing fish plugins..."
+    fish -c "fisher update"
+else
+    echo "No fish_plugins file found, skipping plugin installation"
+end
+
+echo "Fisher setup complete!"
