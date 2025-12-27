@@ -24,7 +24,6 @@ brew "reattach-to-user-namespace"
 brew "ripgrep" # grep, ack, ag (Silver Searcher) alternative but faster and better. `rg` is the command
 brew "scrcpy" # Display and control your Android device. Vital for Android or demoing something over screenshare on a physical android
 brew "sslscan" # Check SSL/TLS services for supported cipher suites
-brew "starship" # Cross-shell prompt, instead of Powerlevel10k or others
 brew "tesseract" # Optical Character Recognition (OCR) CLI
 brew "tlrc" # community maintained TL;DR for CLI tools. My *favorite* tool. It's amazing (Rust client)
 brew "tmux" # used to fix pbcopy/pbpaste in older Apple (pre-2017), or non-Apple versions of tmux, or pre-built, non-GUI versions of VIM
