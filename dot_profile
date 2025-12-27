@@ -4,6 +4,6 @@
 # . $HOME/.asdf/asdf.sh
 
 # mise (alternative to asdf)
-eval "$(mise activate zsh)"
+mise activate fish | source
 
 # alias docker="limactl shell default"

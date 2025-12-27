@@ -38,11 +38,11 @@
       "path": "bash",
       "icon": "terminal-bash"
     },
-    "zsh (login)": {
-      "path": "zsh"
+    "fish (login)": {
+      "path": "fish"
     }
   },
-  "terminal.integrated.defaultProfile.osx": "zsh (login)",
+  "terminal.integrated.defaultProfile.osx": "fish (login)",
   "editor.largeFileOptimizations": false,
   "files.associations": {
     "Jenkinsfile_build": "jenkinsfile",
