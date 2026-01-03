@@ -12,3 +12,5 @@ fish_add_path -g /usr/local/sbin
 fish_add_path -g $HOME/local/bin
 fish_add_path -g $HOME/.local/bin
 fish_add_path -g $HOME/.docker/bin
+
+eval "$(/opt/homebrew/bin/brew shellenv)"

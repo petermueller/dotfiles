@@ -7,3 +7,5 @@
 mise activate fish | source
 
 # alias docker="limactl shell default"
+
+. "$HOME/.atuin/bin/env"
