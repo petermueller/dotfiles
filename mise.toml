@@ -1,0 +1,203 @@
+# Dotfiles and machine setup, managed by mise.
+#
+#   mise bootstrap --dry-run   # preview everything below
+#   mise bootstrap             # packages, system files, dotfiles, then the bootstrap task
+#   mise dot apply             # dotfiles only
+#   mise dot status            # what is (not) in place
+#
+# Docs: https://mise.jdx.dev/dotfiles.html and https://mise.jdx.dev/bootstrap.html
+#
+# This repo is public and is deployed straight from this checkout. On purpose it
+# has no `mise dot origin`, no tracked files and no history/sync service: nothing
+# here is ever pushed or pulled by mise.
+
+min_version = "2026.11.0"
+
+# ── Dotfiles ─────────────────────────────────────────────────────────────────
+
+[dotfiles]
+# home/ mirrors $HOME. Entries are deliberately narrow (single files, or one
+# app's config directory): for a `symlink-each` target mise scans the whole
+# target directory for stale links, so never point one at "~" or "~/Library".
+
+# Single files
+"~/.curlrc" = "home/.curlrc"
+"~/.gitconfig" = "home/.gitconfig"
+"~/.gnupg/gpg-agent.conf" = "home/.gnupg/gpg-agent.conf"
+"~/.iex.exs" = "home/.iex.exs"
+"~/.profile" = "home/.profile"
+"~/.pryrc" = "home/.pryrc"
+"~/.psqlrc" = "home/.psqlrc"
+"~/.rspec" = "home/.rspec"
+"~/.tmate.conf" = "home/.tmate.conf"
+"~/.tmux.conf" = "home/.tmux.conf"
+"~/.vimrc" = "home/.vimrc"
+
+# Config directories. Each file is linked on its own so the directories stay
+# real: tools (fisher, tide, …) keep their own files next to ours without them
+# ending up in this repo.
+"~/.config/alacritty" = { source = "home/.config/alacritty", mode = "symlink-each" }
+"~/.config/atuin" = { source = "home/.config/atuin", mode = "symlink-each" }
+"~/.config/fish" = { source = "home/.config/fish", mode = "symlink-each" }
+"~/.config/ghostty" = { source = "home/.config/ghostty", mode = "symlink-each" }
+"~/.config/git" = { source = "home/.config/git", mode = "symlink-each" }
+"~/.config/keybase" = { source = "home/.config/keybase", mode = "symlink-each" }
+"~/.config/nvim" = { source = "home/.config/nvim", mode = "symlink-each" }
+
+# gh rewrites this file itself and can store a token in it, so it must not be a
+# link into a public repo: seed a private copy once and leave it alone after.
+"~/.config/gh/hosts.yml" = { source = "files/gh/hosts.yml", mode = "copy", permissions = "0600", create_if_missing = true }
+
+# gpg and ssh refuse (or warn about) directories other users can read.
+"~/.gnupg" = { permissions = "0700", depends = ["~/.gnupg/gpg-agent.conf"] }
+"~/.ssh" = { permissions = "0700" }
+
+# macOS only -----------------------------------------------------------------
+
+[dotfiles."~/.gitconfig.platform"]
+source = "macos/gitconfig.platform"
+variants = [{ os = "macos" }]
+
+[dotfiles."~/Library/KeyBindings/DefaultKeyBinding.dict"]
+source = "macos/Library/KeyBindings/DefaultKeyBinding.dict"
+variants = [{ os = "macos" }]
+
+[dotfiles."~/Library/Application Support/iTerm2/DynamicProfiles/dynamic_profile.json"]
+source = "macos/Library/Application Support/iTerm2/DynamicProfiles/dynamic_profile.json"
+variants = [{ os = "macos" }]
+
+# VS Code keeps its user config in a different place per OS.
+[dotfiles."vscode/settings.json"]
+source = "vscode/settings.json"
+variants = [
+  { os = "macos", target = "~/Library/Application Support/Code/User/settings.json" },
+  { os = "linux", target = "~/.config/Code/User/settings.json" },
+]
+
+[dotfiles."vscode/keybindings.json"]
+source = "vscode/keybindings.json"
+variants = [
+  { os = "macos", target = "~/Library/Application Support/Code/User/keybindings.json" },
+  { os = "linux", target = "~/.config/Code/User/keybindings.json" },
+]
+
+# ── System files ─────────────────────────────────────────────────────────────
+
+# Touch ID for sudo. sudo_local survives macOS updates. mise asks for sudo to
+# write it.
+[bootstrap.files."/etc/pam.d/sudo_local"]
+source = "system/sudo_local"
+owner = "root"
+group = "wheel"
+mode = "0644"
+os = "macos"
+
+# ── Login shell ──────────────────────────────────────────────────────────────
+
+# Everything here is configured for fish. mise adds it to /etc/shells and runs
+# `chsh` (which asks for your password) when the login shell is something else.
+[bootstrap.user]
+login_shell = "fish"
+
+# ── Packages ─────────────────────────────────────────────────────────────────
+# mise installs Homebrew bottles and casks itself into /opt/homebrew; Homebrew
+# does not need to be installed (and can manage these too if it is).
+#
+#   mise bootstrap packages status
+#   mise bootstrap packages apply
+#   mise bootstrap packages upgrade
+
+[bootstrap.packages]
+"brew:atuin" = "latest"                      # shell history search and sync
+"brew:bash-completion" = "latest"
+"brew:bat" = "latest"
+"brew:bitwarden-cli" = "latest"              # `mise run ssh-key` pulls the SSH key from Bitwarden
+"brew:diffr" = "latest"                      # better diffing tool, used in git config
+"brew:difftastic" = "latest"                 # `difft`, git's diff.external
+"brew:eza" = "latest"                        # better alternative to ls
+"brew:fish" = "latest"                       # the friendly interactive shell
+"brew:fzf" = "latest"                        # fuzzy-finder
+"brew:gh" = "latest"                         # GitHub's CLI tool
+"brew:git" = "latest"
+"brew:gnupg" = "latest"
+"brew:gping" = "latest"                      # graphical ping
+"brew:jql" = "latest"                        # JSON tool, inspired by `jq`
+"brew:lima" = "latest"                       # macOS containerd/nerdctl (alternative to Docker Desktop, somewhat)
+"brew:mmv" = "latest"                        # multi-move
+"brew:nebula" = "latest"                     # overlay network tool built on the Noise Protocol. Similar to TailScale
+"brew:pinentry-mac" = "latest"               # gpg-agent's pinentry-program
+"brew:postgresql@18" = "latest"
+"brew:procs" = "latest"                      # modern replacement for ps, not backwards compatible
+"brew:reattach-to-user-namespace" = "latest"
+"brew:ripgrep" = "latest"                    # `rg`
+"brew:scrcpy" = "latest"                     # display and control your Android device
+"brew:sslscan" = "latest"                    # check SSL/TLS services for supported cipher suites
+"brew:tesseract" = "latest"                  # Optical Character Recognition (OCR) CLI
+"brew:tlrc" = "latest"                       # community maintained TL;DR for CLI tools (Rust client)
+"brew:tmux" = "latest"
+"brew:unixodbc" = "latest"
+"brew:wrk" = "latest"                        # multi-threaded HTTP benchmarking tool
+"brew:xh" = "latest"                         # curl/wget alternative
+"brew:xz" = "latest"                         # compress/decompress .xz format
+
+# these used to come from third-party taps and are in homebrew-core now
+"brew:dstp" = "latest"                       # common networking tests
+"brew:flyctl" = "latest"                     # Fly.io's CLI
+
+# build dependencies for compiling language runtimes (erlang, ruby, …)
+"brew:autoconf" = "latest"
+"brew:automake" = "latest"
+"brew:coreutils" = "latest"
+"brew:libtool" = "latest"
+"brew:libxslt" = "latest"
+"brew:libyaml" = "latest"
+"brew:openssl@3" = "latest"
+"brew:readline" = "latest"
+
+# apps
+"brew-cask:android-platform-tools" = "latest"
+"brew-cask:dash" = "latest"
+"brew-cask:discord" = "latest"
+"brew-cask:docker-desktop" = "latest"
+"brew-cask:dropbox" = "latest"
+"brew-cask:fantastical" = "latest"
+"brew-cask:firefox" = "latest"
+"brew-cask:gcloud-cli" = "latest"
+"brew-cask:gimp" = "latest"
+"brew-cask:google-chrome" = "latest"
+"brew-cask:google-drive" = "latest"
+"brew-cask:iterm2" = "latest"
+"brew-cask:mailspring" = "latest"
+"brew-cask:postman" = "latest"
+"brew-cask:raycast" = "latest"
+"brew-cask:rectangle-pro" = "latest"
+"brew-cask:responsively" = "latest"
+"brew-cask:slack" = "latest"
+"brew-cask:spotify" = "latest"
+"brew-cask:sqlectron" = "latest"
+"brew-cask:steam" = "latest"
+"brew-cask:telegram" = "latest"
+"brew-cask:visual-studio-code" = "latest"
+"brew-cask:warp" = "latest"
+
+# fonts
+"brew-cask:font-fira-code-nerd-font" = "latest"
+"brew-cask:font-sauce-code-pro-nerd-font" = "latest"
+
+# No longer installable, kept here as a reminder of what the old Brewfile had:
+# "brew-cask:chromedriver" = "latest"          # cask disabled in Homebrew
+# "brew-cask:copyq" = "latest"                 # cask disabled in Homebrew
+# "brew:elixir-tools/tap/next-ls" = "latest"   # project archived, formula gone from its tap
+
+# ── Tasks ────────────────────────────────────────────────────────────────────
+# Scripts live in mise-tasks/. `mise bootstrap` runs the `bootstrap` task last,
+# every time, so everything it depends on is safe to repeat.
+
+[tasks.bootstrap]
+description = "One-off setup that `mise bootstrap` runs after packages and dotfiles"
+depends = ["fisher", "vscode-extensions"]
+run = """
+if [ ! -f "$HOME/.ssh/petermuellercodes_ed25519" ]; then
+  echo "SSH key not installed yet. Run: mise run ssh-key"
+fi
+"""

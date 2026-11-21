@@ -1,0 +1,41 @@
+# VS Code extensions, installed by `mise run vscode-extensions`.
+# One id per line; anything after the id is a comment.
+42Crunch.vscode-openapi                    # Swagger Editor
+aaron-bond.better-comments                 # Annotate/Color TODOs
+alexanderbast.vscode-snazzy                # Colors/Themes
+aliariff.auto-add-brackets
+attilabuti.mustache-syntax-vscode
+bierner.markdown-preview-github-styles
+bmarkovic.haproxy
+bradlc.vscode-tailwindcss
+csstools.postcss
+eamodio.gitlens
+elixir-tools.elixir-tools
+file-icons.file-icons
+florinpatrascu.vscode-elixir-snippets
+github.vscode-github-actions
+GitHub.vscode-pull-request-github
+JakeBecker.elixir-ls
+jock.svg
+lexical-lsp.lexical
+liviuschera.noctis                         # Colors/Themes
+mechatroner.rainbow-csv
+mermade.openapi-lint
+mjmlio.vscode-mjml
+ms-azuretools.vscode-docker
+ms-vscode-remote.remote-containers
+ms-vscode.live-server                      # Runs a simple web server
+ms-vsliveshare.vsliveshare
+msaraiva.surface
+mtxr.sqltools
+pgourlain.erlang
+phoenixframework.phoenix
+redhat.vscode-yaml
+rust-lang.rust-analyzer
+sdras.night-owl                            # Colors/Themes
+swashata.beautiful-ui                      # Colors/Themes
+tamasfe.even-better-toml
+tomoki1207.pdf
+tomphilbin.gruvbox-themes                  # Colors/Themes
+william-voyek.vscode-nginx
+yzhang.markdown-all-in-one

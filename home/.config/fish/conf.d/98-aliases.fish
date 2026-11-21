@@ -4,7 +4,7 @@
 alias e="code"
 
 # Quick-edit commonly edited folders
-alias dotfiles="code ~/.local/share/chezmoi"
+alias dotfiles="code ~/dev/dotfiles"
 
 # Tmux
 alias tmc="clear && tmux clear-history"

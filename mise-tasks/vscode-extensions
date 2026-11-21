@@ -1,0 +1,25 @@
+#!/bin/sh
+#MISE description="Install the VS Code extensions listed in vscode/extensions.txt"
+set -eu
+
+list="${MISE_PROJECT_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}/vscode/extensions.txt"
+
+code=$(command -v code || true)
+if [ -z "$code" ]; then
+  code="/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code"
+fi
+if [ ! -x "$code" ]; then
+  echo "VS Code is not installed. Run: mise bootstrap packages apply" >&2
+  exit 1
+fi
+
+installed=$("$code" --list-extensions | tr '[:upper:]' '[:lower:]')
+
+# One extension id per line; anything after the id is a comment.
+grep -vE '^[[:space:]]*(#|$)' "$list" | while read -r ext _; do
+  id=$(printf '%s' "$ext" | tr '[:upper:]' '[:lower:]')
+  if printf '%s\n' "$installed" | grep -qxF "$id"; then
+    continue
+  fi
+  "$code" --install-extension "$ext" || echo "warning: could not install $ext" >&2
+done

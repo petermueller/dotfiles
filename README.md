@@ -1,67 +1,100 @@
 # Dotfiles
 
-Modern macOS dotfiles managed with [chezmoi](https://www.chezmoi.io/).
+macOS dotfiles and machine setup, managed by [mise](https://mise.jdx.dev):
+[`[dotfiles]`](https://mise.jdx.dev/dotfiles.html) links the config files into
+place and [`mise bootstrap`](https://mise.jdx.dev/bootstrap.html) installs the
+packages and runs the one-off setup. Everything is declared in
+[`mise.toml`](mise.toml).
 
-## Quick Start
+## New machine
 
 ```bash
-# Install chezmoi
-brew install chezmoi
+# git comes with the Xcode Command Line Tools
+xcode-select --install
 
-# Initialize with this repository
-chezmoi init https://github.com/YOUR_USERNAME/dotfiles.git
+# mise installs to ~/.local/bin
+curl -fsSL https://mise.run | sh
+export PATH="$HOME/.local/bin:$PATH"
 
-# Preview changes
-chezmoi diff
+git clone https://github.com/petermueller/dotfiles.git ~/dev/dotfiles
+cd ~/dev/dotfiles
+mise trust
 
-# Apply dotfiles
-chezmoi apply -v
+mise bootstrap --dry-run   # preview
+mise bootstrap             # asks for your password: /opt/homebrew, pkg installers, Touch ID for sudo, chsh to fish
 ```
 
-## What's Included
+Then, by hand:
 
-- **Fish shell** with Tide prompt and curated plugins
-- **Homebrew Bundle** for package management
-- **Development tools** (Git, GitHub CLI, Docker, VSCode, Elixir)
+```bash
+mise run ssh-key           # pulls the SSH key pair out of Bitwarden (prompts for login)
+```
+
+Open a new terminal afterwards: fish is the login shell from then on.
+
+The files are symlinks into this checkout, so keep it where it is (the
+`dotfiles` alias expects `~/dev/dotfiles`). If it moves, run `mise dot apply`
+again from the new location.
+
+## What's included
+
+- **Fish shell** with Tide prompt and curated plugins (via fisher)
+- **Packages**: Homebrew formulae, casks and fonts, installed by mise itself.
+  Homebrew does not need to be installed
+- **Development tools** (Git, GitHub CLI, Docker, VS Code, Elixir)
 - **Modern CLI tools** (bat, eza, ripgrep, fzf, atuin)
-- **Terminal configs** (Alacritty, Ghostty, tmux)
-- **macOS enhancements** (Touch ID for sudo, window management)
+- **Terminal configs** (Alacritty, Ghostty, iTerm2, tmux)
+- **macOS enhancements** (Touch ID for sudo, key bindings)
 
-## Assumptions
+## Layout
 
-- **macOS** - Some features are platform-specific
-- **Homebrew** - Package installation via Brewfile
-- **Bitwarden CLI** - Used for secrets management in templates
+| Path | What |
+| --- | --- |
+| `mise.toml` | Every dotfile entry, package and task |
+| `home/` | Mirrors `$HOME`; linked into place |
+| `macos/` | Files that are only linked on macOS |
+| `files/` | Files that are copied once instead of linked (`gh` rewrites its own config) |
+| `system/` | Root-owned system files (`/etc/pam.d/sudo_local`) |
+| `vscode/` | VS Code settings, keybindings and the extension list |
+| `mise-tasks/` | Setup scripts: `fisher`, `vscode-extensions`, `ssh-key` |
 
-## Useful Commands
+## Useful commands
+
+Run these from this directory (or anywhere with `mise -C ~/dev/dotfiles …`).
 
 ```bash
-# Update dotfiles from repo
-chezmoi update
+mise dot status                   # what is linked, missing or different
+mise dot diff                     # what `apply` would change
+mise dot apply                    # link/copy everything into place
+mise dot unapply                  # remove what apply deployed
 
-# Edit a file and apply changes
-chezmoi edit --apply ~/.config/fish/config.fish
+mise bootstrap status             # packages, system files, dotfiles
+mise bootstrap packages apply     # install anything missing
+mise bootstrap packages upgrade   # upgrade what is installed
 
-# Add a new file to dotfiles
-chezmoi add ~/.config/app/config.yml
-
-# See what would change
-chezmoi diff
-
-# Re-run setup scripts
-chezmoi apply --force
-
-# Pull latest and apply
-cd ~/.local/share/chezmoi && git pull && chezmoi apply -v
+mise tasks                        # list the setup tasks
 ```
 
-## Customization
+## Making changes
 
-1. **Fork this repository** to your own GitHub account
-2. **Update personal configs**: Edit `dot_gitconfig`, `dot_Brewfile`, etc.
-3. **Modify Brewfile**: Add/remove packages in `dot_Brewfile`
-4. **Fish config**: Customize in `dot_config/fish/`
-5. **Apply changes**: Run `chezmoi apply -v`
+- **Edit a dotfile**: edit it in place. It is a symlink, so the change is
+  already in this repo; commit it.
+- **Add a file to an app that is already linked** (anything under
+  `home/.config/<app>/`): drop it in and run `mise dot apply`.
+- **Add a new file or app**: put it under `home/` and add an entry to
+  `[dotfiles]` in `mise.toml`. Link single files or one app's directory; never
+  target `~` or `~/Library` with `symlink-each`, mise would scan all of it.
+- **Add a package**: add `"brew:<formula>" = "latest"` or
+  `"brew-cask:<cask>" = "latest"` to `[bootstrap.packages]`, then
+  `mise bootstrap packages apply`. Deleting a line never uninstalls anything.
+- **Add a VS Code extension**: add its id to `vscode/extensions.txt`, then
+  `mise run vscode-extensions`.
+
+## No sync
+
+This repo is public, so mise's dotfile sync is deliberately not set up: there
+is no `mise dot origin`, nothing is tracked, and no history service runs. mise
+only reads this checkout; pulling and pushing it is plain `git`.
 
 ## License
 

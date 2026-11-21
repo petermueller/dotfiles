@@ -1,0 +1,27 @@
+#!/bin/sh
+#MISE description="Install the fisher plugin manager and the plugins listed in fish_plugins"
+set -eu
+
+fish=$(command -v fish || true)
+if [ -z "$fish" ]; then
+  for candidate in /opt/homebrew/bin/fish /usr/local/bin/fish /home/linuxbrew/.linuxbrew/bin/fish; do
+    if [ -x "$candidate" ]; then
+      fish=$candidate
+      break
+    fi
+  done
+fi
+if [ -z "$fish" ]; then
+  echo "fish is not installed. Run: mise bootstrap packages apply" >&2
+  exit 1
+fi
+
+if [ -f "$HOME/.config/fish/functions/fisher.fish" ]; then
+  echo "fisher already installed (run 'fisher update' in fish to sync plugins)"
+  exit 0
+fi
+
+# fish_plugins is already linked into place by `mise dot apply`, so `fisher
+# update` installs fisher itself plus everything listed there.
+echo "Installing fisher and the plugins in fish_plugins..."
+"$fish" -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update'
