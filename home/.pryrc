@@ -1,1 +1,1 @@
-Pry.config.history.file = "/Users/petermueller/.history/pry"
+Pry.config.history.file = File.expand_path("~/.history/pry")

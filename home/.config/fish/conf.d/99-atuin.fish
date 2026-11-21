@@ -1,7 +1,10 @@
 # Atuin - command history search and sync
 # Press Up, or Ctrl+R to search command history
 
-source "$HOME/.atuin/bin/env.fish"
+# Only present when atuin came from its own installer rather than a package
+if test -f "$HOME/.atuin/bin/env.fish"
+  source "$HOME/.atuin/bin/env.fish"
+end
 
 # Only init and set up completions if installed and interactive shell
 if status is-interactive && command -q atuin

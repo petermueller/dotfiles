@@ -13,4 +13,11 @@ fish_add_path -g $HOME/local/bin
 fish_add_path -g $HOME/.local/bin
 fish_add_path -g $HOME/.docker/bin
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# Homebrew prefix. mise installs the formulae/casks itself (see mise.toml), so
+# the `brew` binary is optional: use its shellenv when present, otherwise just
+# put the prefix on PATH.
+if test -x /opt/homebrew/bin/brew
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+else if test -d /opt/homebrew
+    fish_add_path -g /opt/homebrew/bin /opt/homebrew/sbin
+end
