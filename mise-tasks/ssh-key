@@ -1,8 +1,12 @@
 #!/bin/sh
-#MISE description="Fetch the SSH key pair from Bitwarden into ~/.ssh"
+#MISE description="Fetch the SSH key pair from Bitwarden into ~/.ssh (not needed with Bitwarden's SSH agent)"
 #MISE raw=true
 set -eu
 
+# Optional. SSH normally goes through Bitwarden Desktop's SSH agent (see
+# SSH_AUTH_SOCK in the fish config). This puts the key pair on disk for the
+# cases where that agent is not available.
+#
 # The key pair lives in Bitwarden as two attachments on this item. Nothing
 # secret is stored in this repo.
 item="a6a40ac9-fb9b-40d1-9e17-b0f10044b16a"
@@ -14,28 +18,8 @@ if [ -f "$dir/$key" ] && [ -f "$dir/$key.pub" ]; then
   exit 0
 fi
 
-bw=$(command -v bw || true)
-if [ -z "$bw" ]; then
-  bw=/opt/homebrew/bin/bw
-fi
-if [ ! -x "$bw" ]; then
-  echo "bitwarden-cli (bw) is not installed. Run: mise bootstrap packages apply" >&2
-  exit 1
-fi
-
-# `bw status` reports unauthenticated, locked or unlocked. Logging in and
-# unlocking prompt on the terminal; --raw prints only the session key.
-status=$("$bw" status | sed -E 's/.*"status":"([a-z]+)".*/\1/')
-case "$status" in
-  unauthenticated) BW_SESSION=$("$bw" login --raw) ;;
-  locked) BW_SESSION=$("$bw" unlock --raw) ;;
-  unlocked) : "${BW_SESSION:?vault is unlocked but BW_SESSION is not set in this shell}" ;;
-  *)
-    echo "unexpected 'bw status': $status" >&2
-    exit 1
-    ;;
-esac
-export BW_SESSION
+root="${MISE_PROJECT_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}"
+. "$root/lib/bw.sh"
 
 umask 077
 mkdir -p "$dir"

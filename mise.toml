@@ -111,7 +111,7 @@ login_shell = "fish"
 "brew:atuin" = "latest"                      # shell history search and sync
 "brew:bash-completion" = "latest"
 "brew:bat" = "latest"
-"brew:bitwarden-cli" = "latest"              # `mise run ssh-key` pulls the SSH key from Bitwarden
+"brew:bitwarden-cli" = "latest"              # `bw`: the gpg-key and ssh-key tasks read from Bitwarden
 "brew:diffr" = "latest"                      # better diffing tool, used in git config
 "brew:difftastic" = "latest"                 # `difft`, git's diff.external
 "brew:eza" = "latest"                        # better alternative to ls
@@ -123,6 +123,7 @@ login_shell = "fish"
 "brew:gping" = "latest"                      # graphical ping
 "brew:jql" = "latest"                        # JSON tool, inspired by `jq`
 "brew:lima" = "latest"                       # macOS containerd/nerdctl (alternative to Docker Desktop, somewhat)
+"brew:mas" = "latest"                        # Mac App Store CLI, needed for the mas: entries below
 "brew:mmv" = "latest"                        # multi-move
 "brew:nebula" = "latest"                     # overlay network tool built on the Noise Protocol. Similar to TailScale
 "brew:pinentry-mac" = "latest"               # gpg-agent's pinentry-program
@@ -184,6 +185,11 @@ login_shell = "fish"
 "brew-cask:font-fira-code-nerd-font" = "latest"
 "brew-cask:font-sauce-code-pro-nerd-font" = "latest"
 
+# Mac App Store, by numeric app id (`mas search <name>` finds it). Needs you
+# to be signed in to the App Store. These are skipped until `mas` is on PATH,
+# so on a brand-new machine they install on the second `mise bootstrap`.
+"mas:1352778147" = "latest"                  # Bitwarden (App Store build: its SSH agent is the one SSH_AUTH_SOCK points at)
+
 # No longer installable, kept here as a reminder of what the old Brewfile had:
 # "brew-cask:chromedriver" = "latest"          # cask disabled in Homebrew
 # "brew-cask:copyq" = "latest"                 # cask disabled in Homebrew
@@ -197,7 +203,9 @@ login_shell = "fish"
 description = "One-off setup that `mise bootstrap` runs after packages and dotfiles"
 depends = ["fisher", "vscode-extensions"]
 run = """
-if [ ! -f "$HOME/.ssh/petermuellercodes_ed25519" ]; then
-  echo "SSH key not installed yet. Run: mise run ssh-key"
+key=$(git config --global user.signingkey || true)
+gpg=$(command -v gpg || echo /opt/homebrew/bin/gpg)
+if [ -n "$key" ] && ! "$gpg" --list-secret-keys "$key" >/dev/null 2>&1; then
+  echo "GPG signing key $key is not imported yet. Run: mise run gpg-key"
 fi
 """

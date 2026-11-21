@@ -6,6 +6,9 @@ set -gx ELIXIR_EDITOR "code"
 set -gx PLUG_EDITOR "vscode://file/__FILE__:__LINE__"
 set -gx NODE_EXTRA_CA_CERTS "$HOME/Library/Application Support/mkcert/rootCA.pem"
 
+# SSH keys are served by Bitwarden Desktop's SSH agent (App Store build)
+set -gx SSH_AUTH_SOCK "$HOME/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
+
 # PATH modifications
 # Fish automatically deduplicates PATH entries
 fish_add_path -g /usr/local/sbin

@@ -12,6 +12,8 @@ packages and runs the one-off setup. Everything is declared in
 # git comes with the Xcode Command Line Tools
 xcode-select --install
 
+# sign in to the App Store first if you want the mas: apps installed
+
 # mise installs to ~/.local/bin
 curl -fsSL https://mise.run | sh
 export PATH="$HOME/.local/bin:$PATH"
@@ -27,10 +29,15 @@ mise bootstrap             # asks for your password: /opt/homebrew, pkg installe
 Then, by hand:
 
 ```bash
-mise run ssh-key           # pulls the SSH key pair out of Bitwarden (prompts for login)
+mise run gpg-key           # imports the GPG signing key from Bitwarden (prompts for login)
 ```
 
 Open a new terminal afterwards: fish is the login shell from then on.
+
+SSH keys are not copied to disk: `SSH_AUTH_SOCK` points at Bitwarden Desktop's
+SSH agent (the App Store build, declared as a `mas:` package), so turn the
+agent on in Bitwarden's settings. `mise run ssh-key` still exists for a machine
+where that agent is not an option.
 
 The files are symlinks into this checkout, so keep it where it is (the
 `dotfiles` alias expects `~/dev/dotfiles`). If it moves, run `mise dot apply`
@@ -56,7 +63,8 @@ again from the new location.
 | `files/` | Files that are copied once instead of linked (`gh` rewrites its own config) |
 | `system/` | Root-owned system files (`/etc/pam.d/sudo_local`) |
 | `vscode/` | VS Code settings, keybindings and the extension list |
-| `mise-tasks/` | Setup scripts: `fisher`, `vscode-extensions`, `ssh-key` |
+| `mise-tasks/` | Setup scripts: `fisher`, `vscode-extensions`, `gpg-key`, `ssh-key` |
+| `lib/` | Shell helpers the tasks share (Bitwarden login) |
 
 ## Useful commands
 
@@ -87,6 +95,8 @@ mise tasks                        # list the setup tasks
 - **Add a package**: add `"brew:<formula>" = "latest"` or
   `"brew-cask:<cask>" = "latest"` to `[bootstrap.packages]`, then
   `mise bootstrap packages apply`. Deleting a line never uninstalls anything.
+- **Add an App Store app**: add `"mas:<numeric id>" = "latest"`; `mas search
+  <name>` prints the id.
 - **Add a VS Code extension**: add its id to `vscode/extensions.txt`, then
   `mise run vscode-extensions`.
 

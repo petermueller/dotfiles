@@ -1,0 +1,102 @@
+#!/bin/sh
+#MISE description="Import the GPG signing key from Bitwarden into gpg"
+#MISE raw=true
+set -eu
+
+# The secret key is an attachment on a Bitwarden item in the same folder as
+# the SSH key item. Fill in both values below to skip the lookup; while either
+# is empty, the task lists that folder's attachments and asks which to import.
+# Nothing secret is stored in this repo, and the key is piped straight into
+# gpg without being written to disk.
+item=""
+attachment=""
+ssh_item="a6a40ac9-fb9b-40d1-9e17-b0f10044b16a"
+ssh_key="petermuellercodes_ed25519"
+
+gpg=$(command -v gpg || true)
+if [ -z "$gpg" ]; then
+  gpg=/opt/homebrew/bin/gpg
+fi
+if [ ! -x "$gpg" ]; then
+  echo "gpg is not installed. Run: mise bootstrap packages apply" >&2
+  exit 1
+fi
+
+# The key git signs with, from ~/.gitconfig.
+signingkey=$(git config --global user.signingkey 2>/dev/null || true)
+if [ -n "$signingkey" ] && "$gpg" --list-secret-keys "$signingkey" >/dev/null 2>&1; then
+  echo "GPG secret key $signingkey is already imported"
+  exit 0
+fi
+
+root="${MISE_PROJECT_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}"
+. "$root/lib/bw.sh"
+
+if [ -z "$item" ] || [ -z "$attachment" ]; then
+  folder=$("$bw" get item "$ssh_item" | jq -r '.folderId // empty')
+  if [ -z "$folder" ]; then
+    echo "The SSH key item is not in a folder; set item= and attachment= in $0" >&2
+    exit 1
+  fi
+
+  # One line per attachment in that folder: item id, item name, file name.
+  # The SSH key pair's own two files are left out.
+  choices=$(
+    "$bw" list items --folderid "$folder" |
+      jq -r --arg ssh "$ssh_key" '
+        .[] | . as $i | ($i.attachments // [])[]
+        | select(.fileName != $ssh and .fileName != ($ssh + ".pub"))
+        | [$i.id, $i.name, .fileName] | @tsv'
+  )
+  count=$(printf '%s\n' "$choices" | grep -c . || true)
+
+  case "$count" in
+    0)
+      echo "No other attachments in the SSH key's Bitwarden folder; set item= and attachment= in $0" >&2
+      exit 1
+      ;;
+    1)
+      choice=1
+      ;;
+    *)
+      echo "Attachments in the SSH key's Bitwarden folder:"
+      printf '%s\n' "$choices" | awk -F'\t' '{ printf "  %d) %s  (item: %s)\n", NR, $3, $2 }'
+      printf 'Which one is the GPG secret key? [1-%s] ' "$count"
+      read -r choice
+      ;;
+  esac
+  case "$choice" in
+    '' | *[!0-9]*)
+      echo "Not a number: $choice" >&2
+      exit 1
+      ;;
+  esac
+  line=$(printf '%s\n' "$choices" | sed -n "${choice}p")
+  if [ -z "$line" ]; then
+    echo "No such entry: $choice" >&2
+    exit 1
+  fi
+  item=$(printf '%s\n' "$line" | cut -f1)
+  attachment=$(printf '%s\n' "$line" | cut -f3)
+  looked_up=1
+fi
+
+echo "Importing '$attachment' from Bitwarden item $item"
+"$bw" get attachment "$attachment" --itemid "$item" --raw | "$gpg" --import
+
+if [ -n "$signingkey" ]; then
+  if ! "$gpg" --list-secret-keys "$signingkey" >/dev/null 2>&1; then
+    echo "Imported, but the signing key $signingkey from ~/.gitconfig is not among the secret keys" >&2
+    exit 1
+  fi
+  # It is your own key: trust it ultimately so its signatures verify cleanly.
+  fingerprint=$("$gpg" --list-secret-keys --with-colons "$signingkey" | awk -F: '$1 == "fpr" { print $10; exit }')
+  printf '%s:6:\n' "$fingerprint" | "$gpg" --import-ownertrust
+  echo "GPG secret key $signingkey is imported and trusted"
+fi
+
+if [ -n "${looked_up:-}" ]; then
+  echo "To skip the lookup next time, set these at the top of mise-tasks/gpg-key:"
+  echo "  item=\"$item\""
+  echo "  attachment=\"$attachment\""
+fi
