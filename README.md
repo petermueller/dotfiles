@@ -26,13 +26,16 @@ mise bootstrap --dry-run   # preview
 mise bootstrap             # asks for your password: /opt/homebrew, pkg installers, Touch ID for sudo, chsh to fish
 ```
 
-Then, by hand:
+Then open a new terminal (fish is the login shell from then on) and finish by
+hand:
 
 ```bash
+cd ~/dev/dotfiles
+mise bootstrap             # second run: App Store apps are skipped until `mas` is on PATH
+gh auth login              # GitHub CLI
+atuin login                # shell history sync
 mise run gpg-key           # imports the GPG signing key from Bitwarden (prompts for login)
 ```
-
-Open a new terminal afterwards: fish is the login shell from then on.
 
 SSH keys are not copied to disk: `SSH_AUTH_SOCK` points at Bitwarden Desktop's
 SSH agent (the App Store build, declared as a `mas:` package), so turn the
