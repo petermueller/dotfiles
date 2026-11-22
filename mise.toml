@@ -121,6 +121,7 @@ login_shell = "fish"
 "brew:git" = "latest"
 "brew:gnupg" = "latest"
 "brew:gping" = "latest"                      # graphical ping
+"brew:jq" = "latest"                         # the gpg-key task parses Bitwarden's JSON with it
 "brew:jql" = "latest"                        # JSON tool, inspired by `jq`
 "brew:lima" = "latest"                       # macOS containerd/nerdctl (alternative to Docker Desktop, somewhat)
 "brew:mas" = "latest"                        # Mac App Store CLI, needed for the mas: entries below
