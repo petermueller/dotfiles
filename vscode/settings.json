@@ -29,7 +29,7 @@
     ]
   },
   "markdown.extension.toc.githubCompatibility": true,
-  "terminal.external.osxExec": "iTerm.app",
+  "terminal.external.osxExec": "Ghostty.app",
   "terminal.integrated.enableBold": true,
   "terminal.integrated.rightClickCopyPaste": true,
   "terminal.integrated.fontFamily": "SauceCodeProNerdFontCompleteM-Regular",

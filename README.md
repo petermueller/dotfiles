@@ -53,7 +53,7 @@ again from the new location.
   Homebrew does not need to be installed
 - **Development tools** (Git, GitHub CLI, Docker, VS Code, Elixir)
 - **Modern CLI tools** (bat, eza, ripgrep, fzf, atuin)
-- **Terminal configs** (Alacritty, Ghostty, iTerm2, tmux)
+- **Terminal configs** (Alacritty, Ghostty, tmux)
 - **macOS enhancements** (Touch ID for sudo, key bindings)
 
 ## Layout

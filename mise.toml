@@ -62,10 +62,6 @@ variants = [{ os = "macos" }]
 source = "macos/Library/KeyBindings/DefaultKeyBinding.dict"
 variants = [{ os = "macos" }]
 
-[dotfiles."~/Library/Application Support/iTerm2/DynamicProfiles/dynamic_profile.json"]
-source = "macos/Library/Application Support/iTerm2/DynamicProfiles/dynamic_profile.json"
-variants = [{ os = "macos" }]
-
 # VS Code keeps its user config in a different place per OS.
 [dotfiles."vscode/settings.json"]
 source = "vscode/settings.json"
@@ -165,10 +161,10 @@ login_shell = "fish"
 "brew-cask:fantastical" = "latest"
 "brew-cask:firefox" = "latest"
 "brew-cask:gcloud-cli" = "latest"
+"brew-cask:ghostty" = "latest"
 "brew-cask:gimp" = "latest"
 "brew-cask:google-chrome" = "latest"
 "brew-cask:google-drive" = "latest"
-"brew-cask:iterm2" = "latest"
 "brew-cask:mailspring" = "latest"
 "brew-cask:postman" = "latest"
 "brew-cask:raycast" = "latest"
@@ -179,6 +175,7 @@ login_shell = "fish"
 "brew-cask:sqlectron" = "latest"
 "brew-cask:telegram" = "latest"
 "brew-cask:visual-studio-code" = "latest"
+"brew-cask:zen" = "latest"                     # Zen Browser
 
 # fonts
 "brew-cask:font-fira-code-nerd-font" = "latest"
