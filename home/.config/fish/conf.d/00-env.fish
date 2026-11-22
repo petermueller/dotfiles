@@ -12,7 +12,6 @@ set -gx SSH_AUTH_SOCK "$HOME/Library/Containers/com.bitwarden.desktop/Data/.bitw
 # PATH modifications
 # Fish automatically deduplicates PATH entries
 fish_add_path -g /usr/local/sbin
-fish_add_path -g $HOME/local/bin
 fish_add_path -g $HOME/.local/bin
 fish_add_path -g $HOME/.docker/bin
 
