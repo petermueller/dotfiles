@@ -176,10 +176,8 @@ login_shell = "fish"
 "brew-cask:slack" = "latest"
 "brew-cask:spotify" = "latest"
 "brew-cask:sqlectron" = "latest"
-"brew-cask:steam" = "latest"
 "brew-cask:telegram" = "latest"
 "brew-cask:visual-studio-code" = "latest"
-"brew-cask:warp" = "latest"
 
 # fonts
 "brew-cask:font-fira-code-nerd-font" = "latest"
@@ -189,6 +187,11 @@ login_shell = "fish"
 # to be signed in to the App Store. These are skipped until `mas` is on PATH,
 # so on a brand-new machine they install on the second `mise bootstrap`.
 "mas:1352778147" = "latest"                  # Bitwarden (App Store build: its SSH agent is the one SSH_AUTH_SOCK points at)
+
+# mise 2026.11.11 cannot install these two casks, and one failed cask aborts
+# the whole bootstrap, so install them by hand until it can:
+# "brew-cask:steam" = "latest"               # download is an archive nested inside a zip
+# "brew-cask:warp" = "latest"                # Warp only serves the download to Homebrew's own user agent
 
 # No longer installable, kept here as a reminder of what the old Brewfile had:
 # "brew-cask:chromedriver" = "latest"          # cask disabled in Homebrew
