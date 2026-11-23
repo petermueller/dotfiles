@@ -54,13 +54,14 @@ again from the new location.
 - **Development tools** (Git, GitHub CLI, Docker, VS Code, Elixir)
 - **Modern CLI tools** (bat, eza, ripgrep, fzf, atuin)
 - **Terminal configs** (Alacritty, Ghostty, tmux)
-- **macOS enhancements** (Touch ID for sudo, key bindings)
+- **macOS enhancements** (Touch ID for sudo, key bindings, Caps Lock as
+  Control)
 
 ## Layout
 
 | Path | What |
 | --- | --- |
-| `mise.toml` | Every dotfile entry, package and task |
+| `mise.toml` | Every dotfile entry, package, LaunchAgent and task |
 | `home/` | Mirrors `$HOME`; linked into place |
 | `macos/` | Files that are only linked on macOS |
 | `files/` | Files that are copied once instead of linked (`gh` rewrites its own config) |
@@ -83,6 +84,10 @@ mise bootstrap status             # packages, system files, dotfiles
 mise bootstrap packages apply     # install anything missing
 mise bootstrap packages upgrade   # upgrade what is installed
 
+mise bootstrap macos launchd-agents status   # is the key-remapping agent loaded
+mise bootstrap macos launchd-agents apply    # rewrite and reload it
+hidutil property --get UserKeyMapping        # the remapping in effect right now
+
 mise tasks                        # list the setup tasks
 ```
 
@@ -102,6 +107,12 @@ mise tasks                        # list the setup tasks
   <name>` prints the id.
 - **Add a VS Code extension**: add its id to `vscode/extensions.txt`, then
   `mise run vscode-extensions`.
+- **Remap a key**: add a source/destination pair to the `UserKeyMapping` array
+  of the `key-remapping` agent in `mise.toml`, then
+  `mise bootstrap macos launchd-agents apply`. macOS has no config file for
+  this: the agent runs `hidutil` at every login, because the mapping does not
+  survive a restart. Clear it for the current session with
+  `hidutil property --set '{"UserKeyMapping":[]}'`.
 
 ## No sync
 

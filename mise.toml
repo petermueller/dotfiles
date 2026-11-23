@@ -93,6 +93,29 @@ os = "macos"
 [bootstrap.user]
 login_shell = "fish"
 
+# ── Keyboard ─────────────────────────────────────────────────────────────────
+
+# Caps Lock is Control, on every keyboard. macOS keeps no file for this:
+# `hidutil` sets the mapping for the running session and it is gone after a
+# restart, so a LaunchAgent sets it again at every login. mise writes
+# ~/Library/LaunchAgents/dev.mise.key-remapping.plist and loads it.
+#
+#   mise bootstrap macos launchd-agents status
+#   mise bootstrap macos launchd-agents apply
+#
+# Keys are 0x7000000NN, NN being the USB keyboard usage id: 39 is Caps Lock, E0
+# is Left Control (table: https://developer.apple.com/library/archive/technotes/tn2450/_index.html).
+# Setting UserKeyMapping replaces the whole list, so further remaps go into this
+# same array rather than into a second agent.
+[bootstrap.macos.launchd.agents.key-remapping]
+program = "/usr/bin/hidutil"
+args = [
+  "property",
+  "--set",
+  '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x7000000E0}]}',
+]
+run_at_load = true
+
 # ── Packages ─────────────────────────────────────────────────────────────────
 # mise installs Homebrew bottles and casks itself into /opt/homebrew; Homebrew
 # does not need to be installed (and can manage these too if it is).
